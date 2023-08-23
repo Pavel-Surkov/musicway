@@ -34,7 +34,7 @@ strong {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Mont", Arial, sans-serif;
   font-weight: 400;
   color: #1e1e1e;
   font-size: 1.6rem;
@@ -44,7 +44,7 @@ body {
 }
 
 button, textarea, input, select {
-  font-family: Arial, sans-serif;
+  font-family: "Mont", Arial, sans-serif;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -131,9 +131,23 @@ p {
 }
 
 @font-face {
-  font-family: "RandomGrotesqueStandard";
-  src: url("../assets/fonts/RG-StandardBook.woff") format("woff");
+  font-family: "Mont";
+  src: url("../assets/fonts/Mont-Regular.woff") format("woff"), url("../assets/fonts/Mont-Regular.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mont";
+  src: url("../assets/fonts/Mont-Bold.woff") format("woff"), url("../assets/fonts/Mont-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mont";
+  src: url("../assets/fonts/Mont-SemiBold.woff") format("woff"), url("../assets/fonts/Mont-SemiBold.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
