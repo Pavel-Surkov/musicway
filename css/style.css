@@ -36,7 +36,7 @@ strong {
 body {
   font-family: "Mont", Arial, sans-serif;
   font-weight: 400;
-  color: #1e1e1e;
+  color: #555555;
   font-size: 1.6rem;
   height: 100%;
   background: #fff;
@@ -57,7 +57,7 @@ button, textarea, input, select {
   outline-color: transparent;
   box-shadow: none;
   border-radius: 0;
-  color: #1e1e1e;
+  color: #555555;
 }
 
 input {
@@ -94,24 +94,24 @@ p {
 
 ::-webkit-input-placeholder {
   font-size: 1.6rem;
-  color: #1e1e1e;
+  color: #555555;
 }
 
 ::-moz-placeholder {
   font-size: 1.6rem;
-  color: #1e1e1e;
+  color: #555555;
   opacity: 1;
 }
 
 :-moz-placeholder {
   font-size: 1.6rem;
-  color: #1e1e1e;
+  color: #555555;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
   font-size: 1.6rem;
-  color: #1e1e1e;
+  color: #555555;
 }
 
 :focus::-webkit-input-placeholder {
@@ -128,6 +128,29 @@ p {
 
 :focus::-ms-input-placeholder {
   color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 @font-face {
@@ -151,12 +174,62 @@ p {
   font-style: normal;
   font-display: swap;
 }
-.container {
-  margin: 0 auto;
-  max-width: 1170px;
+.swiper .swiper-pagination-bullet {
+  width: 16px;
+  background: #f7f4f4;
+  height: 3px;
+  border-radius: 100px;
+}
+.swiper .swiper-pagination-bullet-active {
+  background: #ff0245;
 }
 
-@media screen and (max-width: 1220px) {
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  padding: 1.383em 2.333em;
+  border-radius: 32px;
+  color: #fff;
+  background: #ff0027;
+}
+.btn-primary:hover {
+  opacity: 0.8;
+}
+.btn-secondary {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  padding: 1.2857em 2em;
+  border: 1px solid #ff0027;
+  border-radius: 32px;
+  color: #fff;
+  background: transparent;
+}
+.btn-secondary:hover {
+  background: #ff0027;
+}
+
+.title {
+  font-weight: 600;
+}
+.title_size-l {
+  font-size: 4rem;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+@media screen and (max-width: 1480px) {
   .container {
     max-width: 950px;
   }
@@ -176,6 +249,104 @@ p {
     max-width: calc(100% - 40px);
     width: 100%;
   }
+}
+.link {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: 0.05em;
+  font-size: 600;
+  text-decoration: none;
+}
+.link:hover {
+  color: #ef1a2a;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.header-wrapper {
+  padding-top: 40px;
+  gap: 2rem;
+}
+.header-top {
+  gap: 38px;
+  margin-bottom: 28px;
+}
+.header-nav {
+  gap: 46px;
+}
+.header-social-link {
+  font-size: 1.7rem;
+  line-height: 0.8823529412;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #fff;
+  position: relative;
+  padding-left: 40px;
+  text-decoration: none;
+}
+.header-social-link:hover {
+  opacity: 0.8;
+}
+.header-social-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: url("../assets/icons/whatsapp.svg") no-repeat 50%/cover;
+}
+
+@media screen and (max-width: 1480px) {
+  .header-nav {
+    gap: 30px;
+  }
+}
+.hero {
+  position: relative;
+  background: #000;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero-wrapper {
+  padding-top: 242px;
+  padding-bottom: 155px;
+}
+.hero-swiper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero-swiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-title {
+  margin-bottom: 30px;
+  max-width: 492px;
+  color: #fff;
+}
+.hero-subtitle {
+  margin-bottom: 100px;
+  max-width: 465px;
+}
+.hero-subtitle p {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,14 +14,77 @@
 	<meta property="og:url" content="" />
 	<meta property="og:image" content="" />
 	<title>Home page</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
-	<main class="main">
+	<header class="header header-transparent">
+		<div class="container">
+			<div class="header-wrapper flex items-center justify-between">
+				<a href="/" class="logo">
+					<img src="./assets/images/logo.svg" alt="logo" />
+				</a>
+				<div>
+					<div class="header-top flex flex-end items-center">
+						<a href="https://wa.me/74955968097" class="header-social-link">+7(495)596-80-97</a>
+						<button class="btn-secondary">Запись на первый урок</button>
+					</div>
+					<nav class="header-nav flex flex-end">
+						<a href="about.html" class="link header-nav__link">О школе</a>
+						<a href="courses.html" class="link header-nav__link">Курсы</a>
+						<a href="prices.html" class="link header-nav__link">Цены</a>
+						<a href="teachers.html" class="link header-nav__link">Педагоги</a>
+						<a href="news.html" class="link header-nav__link">Новости</a>
+						<a href="contacts.html" class="link header-nav__link">Контакты</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main home">
+		<section class="hero">
+			<!-- Swiper -->
+			<div class="swiper hero-swiper">
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide">
+						<img src="./assets/images/hero-pic.jpg"
+							srcset="./assets/images/hero-pic.jpg 1x, ./assets/images/hero-pic@2x.jpg 2x" alt="" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/hero-pic.jpg"
+							srcset="./assets/images/hero-pic.jpg 1x, ./assets/images/hero-pic@2x.jpg 2x" alt="" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./assets/images/hero-pic.jpg"
+							srcset="./assets/images/hero-pic.jpg 1x, ./assets/images/hero-pic@2x.jpg 2x" alt="" />
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<div class="hero-content">
+				<div class="container">
+					<div class="hero-wrapper">
+						<h1 class="title title_size-l hero-title">
+							Научим петь любимую
+							песню за 7 занятий!
+						</h1>
+						<div class="hero-subtitle">
+							<p>Лучшие наставники и педагоги воплотят
+								твою заветную мечту красиво петь!</p>
+						</div>
+						<div class="hero-btn">
+							<a href="/" class="btn-primary">Запись на бесплатный урок</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 	</main>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script src="js/main.js" defer></script>
 </body>
 
 </html>
-<script src="js/main.js" defer></script>

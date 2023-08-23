@@ -1,2 +1,48 @@
 .header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	&-wrapper {
+		padding-top: 40px;
+		gap: 2rem;
+	}
+	&-top {
+		gap: 38px;
+		margin-bottom: 28px;
+	}
+	&-nav {
+		gap: 46px;
+	}
+	&-social-link {
+		@include font(1.7rem, calc(15 / 17));
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		color: $white;
+		position: relative;
+		padding-left: 40px;
+		text-decoration: none;
+		&:hover {
+			opacity: 0.8;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 30px;
+			height: 30px;
+			background: icon('whatsapp.svg') no-repeat 50% / cover;
+		}
+	}
+}
+
+@media screen and (max-width: 1480px) {
+	.header {
+		&-nav {
+			gap: 30px;
+		}
+	}
 }

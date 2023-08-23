@@ -5,9 +5,12 @@
 // Import base
 @import './base/base', './base/default', './base/fonts';
 // Import Components
-@import './components/button', './components/title', './components/container', './components/link', './components/input';
+@import './components/swiper', './components/button', './components/title', './components/container',
+	'./components/link', './components/input';
 // Import Layout
 @import './layout/section', './layout/header', './layout/hero', './layout/footer', './layout/main';
+// Import Components
+@import './components/hero';
 // Import Pages
 @import './pages/home';
 // Import Components

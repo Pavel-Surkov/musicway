@@ -1,2 +1,10 @@
 .link {
+	@include font(1.6rem, 1);
+	color: $white;
+	letter-spacing: 0.05em;
+	font-size: 600;
+	text-decoration: none;
+	&:hover {
+		color: $red-100;
+	}
 }

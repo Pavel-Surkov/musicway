@@ -1,0 +1,14 @@
+.flex {
+	@include flex();
+	&-end {
+		justify-content: flex-end;
+	}
+}
+
+.items-center {
+	align-items: center;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
