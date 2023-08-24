@@ -153,6 +153,14 @@ a {
   justify-content: space-between;
 }
 
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
 @font-face {
   font-family: "Mont";
   src: url("../assets/fonts/Mont-Regular.woff") format("woff"), url("../assets/fonts/Mont-Regular.woff2") format("woff2");
@@ -174,7 +182,16 @@ a {
   font-style: normal;
   font-display: swap;
 }
+.swiper .swiper-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
 .swiper .swiper-pagination-bullet {
+  margin: 0 !important;
   width: 16px;
   background: #f7f4f4;
   height: 3px;
@@ -182,6 +199,8 @@ a {
 }
 .swiper .swiper-pagination-bullet-active {
   background: #ff0245;
+  height: 5px;
+  width: 20px;
 }
 
 .btn-primary {
@@ -218,18 +237,25 @@ a {
 
 .title {
   font-weight: 600;
+  color: #222;
+  margin: 0;
 }
 .title_size-l {
   font-size: 4rem;
   line-height: 1.1;
   letter-spacing: 0.03em;
 }
+.title_size-m {
+  font-size: 3.2rem;
+  line-height: 1.1875;
+  letter-spacing: 0.03em;
+}
 .container {
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1200px;
 }
 
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 1280px) {
   .container {
     max-width: 950px;
   }
@@ -260,6 +286,28 @@ a {
 }
 .link:hover {
   color: #ef1a2a;
+}
+.link-arrow {
+  position: relative;
+  padding-right: 38px;
+  font-size: 1.8rem;
+  line-height: 1.6111111111;
+  font-weight: 600;
+  color: #ff0027;
+  letter-spacing: 0.03em;
+}
+.link-arrow:hover {
+  opacity: 0.8;
+}
+.link-arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 12.5px;
+  background: url("../assets/icons/arrow.svg") no-repeat 50%/cover;
 }
 
 .header {
@@ -304,7 +352,7 @@ a {
   background: url("../assets/icons/whatsapp.svg") no-repeat 50%/cover;
 }
 
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 1280px) {
   .header-nav {
     gap: 30px;
   }
@@ -333,6 +381,10 @@ a {
   height: 100%;
   object-fit: cover;
 }
+.hero-swiper .swiper-pagination {
+  position: absolute;
+  bottom: 36px;
+}
 .hero-title {
   margin-bottom: 30px;
   max-width: 492px;
@@ -347,6 +399,79 @@ a {
   font-size: 2rem;
   line-height: 1.5;
   letter-spacing: 0.05em;
+}
+
+.about-wrapper {
+  padding-top: 85px;
+}
+.about-micro {
+  left: 0;
+  top: 50px;
+  transform: translateX(-50%);
+}
+.about-top {
+  gap: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 32px;
+}
+.about-title .title {
+  max-width: 390px;
+  margin-bottom: 16px;
+}
+.about-text p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.about-lessons {
+  margin-bottom: 90px;
+}
+.about-lessons-swiper {
+  padding-bottom: 20px;
+}
+.about-lessons-swiper .swiper-pagination {
+  bottom: 0;
+}
+.about-lessons-swiper .swiper-pagination-bullet {
+  background: #a7a7a7;
+}
+.about-lessons-swiper .swiper-pagination-bullet-active {
+  background: #ff0027;
+}
+
+.activity-block {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 440px;
+}
+.activity-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.activity-block p {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 87px 26px 35px;
+  background: url("../assets/images/activity-fade.svg") no-repeat 50%/cover;
+  font-weight: 600;
+  font-size: 2.6rem;
+  line-height: 1.0769230769;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+.activity-block i {
+  position: absolute;
+  z-index: 2;
+  width: 28px;
+  height: 12px;
+  right: 26px;
+  bottom: 40px;
+  background: url("../assets/icons/arrow.svg") no-repeat 50%/cover;
 }
 
 /*# sourceMappingURL=style.css.map */

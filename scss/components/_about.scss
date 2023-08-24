@@ -1,0 +1,43 @@
+.about {
+	&-wrapper {
+		padding-top: 85px;
+	}
+	&-micro {
+		left: 0;
+		top: 50px;
+		transform: translateX(-50%);
+	}
+	&-top {
+		gap: 60px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 32px;
+	}
+	&-title {
+		& .title {
+			max-width: 390px;
+			margin-bottom: 16px;
+		}
+	}
+	&-text {
+		& p {
+			@include font(1.6rem, calc(24 / 16));
+			font-weight: 400;
+		}
+	}
+	&-lessons {
+		margin-bottom: 90px;
+		&-swiper {
+			padding-bottom: 20px;
+			& .swiper-pagination {
+				bottom: 0;
+				&-bullet {
+					background: #a7a7a7;
+					&-active {
+						background: $red-200;
+					}
+				}
+			}
+		}
+	}
+}

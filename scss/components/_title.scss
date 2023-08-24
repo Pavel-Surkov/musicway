@@ -1,11 +1,15 @@
 .title {
 	font-weight: 600;
+	color: $black-100;
+	margin: 0;
 	&_size {
 		&-l {
 			@include font(4rem, calc(44 / 40));
 			letter-spacing: 0.03em;
 		}
 		&-m {
+			@include font(3.2rem, calc(38 / 32));
+			letter-spacing: 0.03em;
 		}
 		&-s {
 		}

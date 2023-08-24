@@ -7,4 +7,25 @@
 	&:hover {
 		color: $red-100;
 	}
+	&-arrow {
+		position: relative;
+		padding-right: 38px;
+		@include font(1.8rem, calc(29 / 18));
+		font-weight: 600;
+		color: $red-200;
+		letter-spacing: 0.03em;
+		&:hover {
+			opacity: 0.8;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 28px;
+			height: 12.5px;
+			background: icon('arrow.svg') no-repeat 50% / cover;
+		}
+	}
 }
