@@ -13,10 +13,19 @@ const heroSwiper = new Swiper('.hero-swiper', {
 // About swiper
 const aboutSwiper = new Swiper('.about-lessons-swiper', {
   autoplay: true,
-  speed: 1500,
   slidesPerView: 3,
   spaceBetween: 24,
   pagination: {
     el: '.about-lessons-swiper .swiper-pagination',
+  },
+});
+
+// Recommendations swiper
+const recommendationsSwiper = new Swiper('.about-recommendations-swiper', {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  navigation: {
+    prevEl: '.about-recommendations-wrapper .swiper-navigation-prev',
+    nextEl: '.about-recommendations-wrapper .swiper-navigation-next',
   },
 });

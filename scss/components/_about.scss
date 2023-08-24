@@ -40,4 +40,93 @@
 			}
 		}
 	}
+	&-main {
+		display: grid;
+		grid-template-columns: 4.5fr 6.8fr;
+		grid-gap: 70px;
+		align-items: center;
+		margin-bottom: 80px;
+		&__content {
+			& .title {
+				color: $red-200;
+				margin-bottom: 40px;
+			}
+		}
+		&__text {
+			margin-bottom: 40px;
+			& p {
+				@include font(2.2rem, calc(30 / 22));
+				font-weight: 400;
+			}
+		}
+		&__video {
+			display: flex;
+			border-radius: 10px;
+			overflow: hidden;
+			&-wrapper {
+				align-items: center;
+			}
+			& video {
+				width: 100%;
+				height: auto;
+			}
+			& .play-btn {
+				display: flex;
+				position: absolute;
+				z-index: 5;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				border-radius: 50%;
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+			& p {
+				z-index: 2;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				padding: 100px 33px 30px;
+				@include font(1.8rem, calc(28 / 18));
+				color: $white;
+				background: image('activity-fade.svg') no-repeat 50% / cover;
+			}
+		}
+	}
+	&-recommendations {
+		&__star {
+			top: -50px;
+			left: 0;
+			transform: translateX(-50%);
+		}
+		& .title {
+			max-width: 320px;
+			position: relative;
+			margin-bottom: 30px;
+		}
+		& .swiper-navigation {
+			position: absolute;
+			top: 50%;
+			width: 48px;
+			height: 48px;
+			background: $red-200;
+			border-radius: 50%;
+			display: grid;
+			place-items: center;
+			z-index: 2;
+			&:hover {
+				opacity: 0.8;
+			}
+			&-prev {
+				transform: translateY(-50%) translateX(-50%);
+				left: 0;
+			}
+			&-next {
+				transform: translateY(-50%) translateX(50%);
+				right: 0;
+			}
+		}
+	}
 }

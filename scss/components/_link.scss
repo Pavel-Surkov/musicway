@@ -14,9 +14,6 @@
 		font-weight: 600;
 		color: $red-200;
 		letter-spacing: 0.03em;
-		&:hover {
-			opacity: 0.8;
-		}
 		&::after {
 			content: '';
 			position: absolute;
@@ -26,6 +23,11 @@
 			width: 28px;
 			height: 12.5px;
 			background: icon('arrow.svg') no-repeat 50% / cover;
+			will-change: transform;
+			transition: transform 0.2s;
+		}
+		&:hover::after {
+			transform: translateY(-50%) translateX(8px);
 		}
 	}
 }
