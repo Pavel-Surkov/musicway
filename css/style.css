@@ -36,7 +36,7 @@ strong {
 body {
   font-family: "Mont", Arial, sans-serif;
   font-weight: 400;
-  color: #555555;
+  color: #555;
   font-size: 1.6rem;
   height: 100%;
   background: #fff;
@@ -57,7 +57,7 @@ button, textarea, input, select {
   outline-color: transparent;
   box-shadow: none;
   border-radius: 0;
-  color: #555555;
+  color: #555;
 }
 
 input {
@@ -94,24 +94,24 @@ p {
 
 ::-webkit-input-placeholder {
   font-size: 1.6rem;
-  color: #555555;
+  color: #555;
 }
 
 ::-moz-placeholder {
   font-size: 1.6rem;
-  color: #555555;
+  color: #555;
   opacity: 1;
 }
 
 :-moz-placeholder {
   font-size: 1.6rem;
-  color: #555555;
+  color: #555;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
   font-size: 1.6rem;
-  color: #555555;
+  color: #555;
 }
 
 :focus::-webkit-input-placeholder {
@@ -310,6 +310,20 @@ a {
 }
 .link-arrow:hover::after {
   transform: translateY(-50%) translateX(8px);
+}
+
+.input-primary {
+  padding: 0;
+  padding-bottom: 18px;
+  border-bottom: 1.5px solid #bab6b6;
+  color: #222;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.input-primary::placeholder {
+  color: #888;
+  font-size: 1.8rem;
+  line-height: 1;
 }
 
 .header {
@@ -617,6 +631,40 @@ a {
   color: #222;
   text-align: center;
   max-width: 240px;
+}
+
+.contact {
+  background: url("../assets/images/contact-bg.png") no-repeat 50%/cover;
+}
+.contact-wrapper {
+  padding: 118px 0;
+}
+.contact-title {
+  margin-bottom: 38px;
+  max-width: 490px;
+}
+.contact-subtitle {
+  margin-bottom: 100px;
+  max-width: 510px;
+}
+.contact-subtitle p {
+  font-size: 2.2rem;
+  line-height: 1.4545454545;
+  letter-spacing: 0.03em;
+}
+.contact-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  gap: 45px;
+}
+.contact-form input {
+  min-width: 210px;
+}
+.contact-form .btn-primary {
+  padding: 1.222em 2.27777em;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+.contact {
+	background: image('contact-bg.png') no-repeat 50% / cover;
+	&-wrapper {
+		padding: 118px 0;
+	}
+	&-title {
+		margin-bottom: 38px;
+		max-width: 490px;
+	}
+	&-subtitle {
+		margin-bottom: 100px;
+		max-width: 510px;
+		& p {
+			@include font(2.2rem, calc(32 / 22));
+			letter-spacing: 0.03em;
+		}
+	}
+	&-form {
+		@include flex(row, flex-end);
+		gap: 45px;
+		& input {
+			min-width: 210px;
+		}
+		& .btn-primary {
+			padding: 1.222em 2.27777em;
+		}
+	}
+}

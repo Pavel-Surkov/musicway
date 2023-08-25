@@ -1,2 +1,13 @@
 .input {
+	&-primary {
+		padding: 0;
+		padding-bottom: 18px;
+		border-bottom: 1.5px solid $gray-200;
+		color: $black-100;
+		@include font(1.8rem, 1);
+		&::placeholder {
+			color: $gray-300;
+			@include font(1.8rem, 1);
+		}
+	}
 }
