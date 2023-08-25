@@ -403,6 +403,9 @@ a {
   letter-spacing: 0.05em;
 }
 
+.about {
+  margin-bottom: 110px;
+}
 .about-wrapper {
   padding-top: 85px;
 }
@@ -581,6 +584,39 @@ a {
   line-height: 1.1666666667;
   color: #fff;
   background: url("../assets/images/activity-fade.svg") no-repeat 50%/cover;
+}
+
+.advantages {
+  margin-bottom: 120px;
+}
+.advantages-title {
+  text-align: center;
+  max-width: 390px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.advantages-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+}
+.advantages-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.advantages-item img {
+  margin-bottom: 28px;
+}
+.advantages-item p {
+  font-size: 1.8rem;
+  line-height: 1.3333333333;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  max-width: 240px;
 }
 
 /*# sourceMappingURL=style.css.map */

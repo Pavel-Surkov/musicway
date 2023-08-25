@@ -1,0 +1,27 @@
+.advantages {
+	margin-bottom: 120px;
+	&-title {
+		text-align: center;
+		max-width: 390px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	&-content {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 24px;
+	}
+	&-item {
+		@include flex(column, center);
+		& img {
+			margin-bottom: 28px;
+		}
+		& p {
+			@include font(1.8rem, calc(24 / 18));
+			font-weight: 600;
+			color: $black-100;
+			text-align: center;
+			max-width: 240px;
+		}
+	}
+}
