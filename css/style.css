@@ -319,6 +319,14 @@ a {
 .link-arrow:hover::after {
   transform: translateY(-50%) translateX(8px);
 }
+.link-social {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  display: grid;
+  place-items: center;
+}
 
 .input-primary {
   padding: 0;
@@ -418,6 +426,113 @@ a {
     gap: 30px;
   }
 }
+.footer {
+  border-top: 1px solid rgba(112, 112, 112, 0.2);
+}
+.footer-wrapper {
+  padding: 78px 0;
+}
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 22px;
+}
+.footer-nav {
+  gap: 40px;
+}
+.footer-nav .link {
+  color: #222;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.footer-nav .link:hover {
+  color: #ef1a2a;
+}
+.footer-middle {
+  display: grid;
+  grid-template-columns: 8.3fr 3.7fr;
+  margin-bottom: 24px;
+}
+.footer-middle__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.footer-middle .btn-secondary {
+  font-size: 1.4rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #222;
+  padding: 20px 56px;
+}
+.footer-middle .btn-secondary:hover {
+  color: #fff;
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+.footer-contacts__tel {
+  font-size: 2.2rem;
+  line-height: 1.0909090909;
+  margin-bottom: 16px;
+  display: inline-block;
+  color: #222;
+  font-weight: 600;
+}
+.footer-contacts__tel:hover {
+  opacity: 0.8;
+}
+.footer-contacts p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #222;
+}
+.footer-contacts__mail {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #ef1a2a;
+}
+.footer-contacts__mail:hover {
+  opacity: 0.8;
+}
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 4fr 4.3fr 3.7fr;
+}
+.footer-bottom__info {
+  font-size: 1.4rem;
+  line-height: 1.5714285714;
+}
+.footer-bottom__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+.footer-bottom__dev {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+.footer-bottom__dev p {
+  font-size: 1.4rem;
+  line-height: 1.5714285714;
+}
+
 .hero {
   position: relative;
   background: #000;

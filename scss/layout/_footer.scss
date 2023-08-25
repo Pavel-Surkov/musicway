@@ -1,2 +1,80 @@
 .footer {
+	border-top: 1px solid rgba($gray-500, 0.2);
+	&-wrapper {
+		padding: 78px 0;
+	}
+	&-top {
+		@include flex(row, flex-start, space-between);
+		margin-bottom: 22px;
+	}
+	&-nav {
+		gap: 40px;
+		& .link {
+			color: $black-100;
+			font-weight: 600;
+			letter-spacing: 0.05em;
+			&:hover {
+				color: $red-100;
+			}
+		}
+	}
+	&-middle {
+		display: grid;
+		grid-template-columns: 8.3fr 3.7fr;
+		margin-bottom: 24px;
+		&__btn {
+			@include flex(row, flex-start, flex-end);
+		}
+		& .btn-secondary {
+			@include font(1.4rem, 1);
+			letter-spacing: 0.05em;
+			font-weight: 600;
+			color: $black-100;
+			padding: 20px 56px;
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+	&-contacts {
+		@include flex(column, flex-end);
+		&__tel {
+			@include font(2.2rem, calc(24 / 22));
+			margin-bottom: 16px;
+			display: inline-block;
+			color: $black-100;
+			font-weight: 600;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		& p {
+			@include font(1.6rem, calc(24 / 16));
+			color: $black-100;
+		}
+		&__mail {
+			@include font(1.6rem, calc(24 / 16));
+			color: $red-100;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	&-bottom {
+		display: grid;
+		grid-template-columns: 4fr 4.3fr 3.7fr;
+		&__info {
+			@include font(1.4rem, calc(22 / 14));
+		}
+		&__social {
+			@include flex(row, flex-start, flex-end);
+			gap: 12px;
+		}
+		&__dev {
+			@include flex(row, flex-end, flex-end);
+			& p {
+				@include font(1.4rem, calc(22 / 14));
+			}
+		}
+	}
 }

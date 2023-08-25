@@ -30,4 +30,12 @@
 			transform: translateY(-50%) translateX(8px);
 		}
 	}
+	&-social {
+		width: 38px;
+		height: 38px;
+		border-radius: 50%;
+		background: $light-200;
+		display: grid;
+		place-items: center;
+	}
 }
