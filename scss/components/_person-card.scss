@@ -1,4 +1,30 @@
 .person-card {
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	& img {
+		border-radius: 10px;
+		object-fit: cover;
+	}
+	&__bottom {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 90px 22px 28px;
+		background: image('person-fade.svg') no-repeat 50% / cover;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		min-height: 242px;
+		& .title {
+			margin-bottom: 12px;
+			color: $white;
+		}
+		& p {
+			@include font(1.6rem, calc(24 / 16));
+			color: $white;
+		}
+	}
 	&_small {
 		border-radius: 10px;
 		overflow: hidden;

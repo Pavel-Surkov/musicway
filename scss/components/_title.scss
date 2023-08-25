@@ -12,6 +12,8 @@
 			letter-spacing: 0.03em;
 		}
 		&-s {
+			@include font(2.8rem, calc(32 / 28));
+			letter-spacing: 0.03em;
 		}
 	}
 }

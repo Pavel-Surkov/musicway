@@ -29,3 +29,13 @@ const recommendationsSwiper = new Swiper('.about-recommendations-swiper', {
     nextEl: '.about-recommendations-wrapper .swiper-navigation-next',
   },
 });
+
+// Teachers swiper
+const teachersSwiper = new Swiper('.teachers-swiper', {
+  slidesPerView: 3,
+  spaceBetween: 24,
+  navigation: {
+    prevEl: '.teachers-swiper-wrapper .swiper-navigation-prev',
+    nextEl: '.teachers-swiper-wrapper .swiper-navigation-next',
+  },
+});
