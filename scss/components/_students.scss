@@ -1,0 +1,14 @@
+.students {
+	&-wrapper {
+		padding: 70px 0 92px;
+	}
+	&-title {
+		max-width: 290px;
+		margin-bottom: 32px;
+	}
+	&-videos {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 20px;
+	}
+}

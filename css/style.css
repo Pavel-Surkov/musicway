@@ -334,6 +334,43 @@ a {
   line-height: 1;
 }
 
+.video {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.video-wrapper {
+  align-items: center;
+}
+.video video {
+  width: 100%;
+  height: auto;
+}
+.video .play-btn {
+  display: flex;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 50%;
+}
+.video .play-btn:hover {
+  opacity: 0.8;
+}
+.video p {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 100px 33px 30px;
+  font-size: 1.8rem;
+  line-height: 1.5555555556;
+  color: #fff;
+  background: url("../assets/images/activity-fade.svg") no-repeat 50%/cover;
+}
+
 .header {
   position: absolute;
   left: 0;
@@ -484,42 +521,6 @@ a {
   font-size: 2.2rem;
   line-height: 1.3636363636;
   font-weight: 400;
-}
-.about-main__video {
-  display: flex;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.about-main__video-wrapper {
-  align-items: center;
-}
-.about-main__video video {
-  width: 100%;
-  height: auto;
-}
-.about-main__video .play-btn {
-  display: flex;
-  position: absolute;
-  z-index: 5;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  border-radius: 50%;
-}
-.about-main__video .play-btn:hover {
-  opacity: 0.8;
-}
-.about-main__video p {
-  z-index: 2;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 100px 33px 30px;
-  font-size: 1.8rem;
-  line-height: 1.5555555556;
-  color: #fff;
-  background: url("../assets/images/activity-fade.svg") no-repeat 50%/cover;
 }
 .about-recommendations__star {
   top: -50px;
@@ -805,6 +806,19 @@ a {
 }
 .price-item .btn-secondary:hover {
   color: #fff;
+}
+
+.students-wrapper {
+  padding: 70px 0 92px;
+}
+.students-title {
+  max-width: 290px;
+  margin-bottom: 32px;
+}
+.students-videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
