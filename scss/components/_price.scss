@@ -1,0 +1,60 @@
+.price {
+	background: $light-100;
+	&-wrapper {
+		padding: 85px 0 92px;
+	}
+	&-top {
+		margin-bottom: 30px;
+		@include flex(row, center, space-between);
+	}
+	&-block {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 20px;
+	}
+	&-item {
+		background: $white;
+		border-radius: 10px;
+		padding: 0 24px 22px;
+		&__icon {
+			min-height: 100px;
+			display: grid;
+			align-content: center;
+		}
+		&__title {
+			margin-bottom: 8px;
+			max-width: 210px;
+			& p {
+				@include font(2.2rem, calc(26 / 22));
+				font-weight: 600;
+				letter-spacing: 0.03em;
+				color: $black-100;
+			}
+		}
+		& span {
+			@include font(1.6rem, calc(24 / 16));
+			color: $gray-400;
+			display: inline-block;
+			margin-bottom: 56px;
+		}
+		&__price {
+			margin-bottom: 24px;
+			& p {
+				@include font(3rem, calc(26 / 30));
+				letter-spacing: 0.03em;
+				color: $black-100;
+				font-weight: 600;
+			}
+		}
+		& .btn-secondary {
+			color: $black-100;
+			width: 100%;
+			@include font(1.8rem, 1);
+			letter-spacing: 0.05em;
+			padding: 1.111em 2em;
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}

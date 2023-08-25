@@ -1,5 +1,6 @@
 .btn {
 	&-primary {
+		text-align: center;
 		display: inline-block;
 		text-decoration: none;
 		@include font(1.8rem, 1);
@@ -14,6 +15,7 @@
 		}
 	}
 	&-secondary {
+		text-align: center;
 		text-decoration: none;
 		display: inline-block;
 		@include font(1.4rem, 1);
