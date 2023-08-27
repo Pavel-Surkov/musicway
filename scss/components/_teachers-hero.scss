@@ -1,0 +1,33 @@
+.teachers-hero {
+	margin-bottom: 68px;
+	&-block {
+		position: relative;
+		border-radius: 10px;
+		overflow: hidden;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__bottom {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 50px 44px 49px;
+		background: image('teachers-fade.svg') no-repeat 50% / cover;
+		& .title {
+			@include font(3.8rem, calc(44 / 38));
+			letter-spacing: 0.05em;
+			color: $white;
+			margin-bottom: 16px;
+			max-width: 600px;
+		}
+		& p {
+			@include font(1.8rem, calc(27 / 18));
+			color: $white;
+			max-width: 735px;
+		}
+	}
+}

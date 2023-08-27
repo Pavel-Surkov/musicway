@@ -230,11 +230,12 @@ a {
   padding: 1.2857em 2em;
   border: 1px solid #ff0027;
   border-radius: 32px;
-  color: #fff;
+  color: #222;
   background: transparent;
 }
 .btn-secondary:hover {
   background: #ff0027;
+  color: #fff;
 }
 
 .title {
@@ -380,11 +381,24 @@ a {
 }
 
 .header {
+  width: 100%;
+  z-index: 10;
+  margin-bottom: 46px;
+}
+.header-transparent {
+  margin-bottom: 0;
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  z-index: 10;
+}
+.header-transparent .header-social-link {
+  color: #fff;
+}
+.header-transparent .btn-secondary {
+  color: #fff;
+}
+.header-transparent .header-nav__link {
+  color: #fff;
 }
 .header-wrapper {
   padding-top: 40px;
@@ -397,12 +411,15 @@ a {
 .header-nav {
   gap: 46px;
 }
+.header-nav__link {
+  color: #222;
+}
 .header-social-link {
   font-size: 1.7rem;
   line-height: 0.8823529412;
   font-weight: 600;
   letter-spacing: 0.1em;
-  color: #fff;
+  color: #222;
   position: relative;
   padding-left: 40px;
   text-decoration: none;
@@ -934,6 +951,42 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+}
+
+.teachers-hero {
+  margin-bottom: 68px;
+}
+.teachers-hero-block {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.teachers-hero-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.teachers-hero__bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 50px 44px 49px;
+  background: url("../assets/images/teachers-fade.svg") no-repeat 50%/cover;
+}
+.teachers-hero__bottom .title {
+  font-size: 3.8rem;
+  line-height: 1.1578947368;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-bottom: 16px;
+  max-width: 600px;
+}
+.teachers-hero__bottom p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #fff;
+  max-width: 735px;
 }
 
 /*# sourceMappingURL=style.css.map */

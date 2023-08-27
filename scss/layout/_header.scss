@@ -1,9 +1,22 @@
 .header {
-	position: absolute;
-	left: 0;
-	top: 0;
 	width: 100%;
 	z-index: 10;
+	margin-bottom: 46px;
+	&-transparent {
+		margin-bottom: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		& .header-social-link {
+			color: $white;
+		}
+		& .btn-secondary {
+			color: $white;
+		}
+		& .header-nav__link {
+			color: $white;
+		}
+	}
 	&-wrapper {
 		padding-top: 40px;
 		gap: 2rem;
@@ -14,12 +27,15 @@
 	}
 	&-nav {
 		gap: 46px;
+		&__link {
+			color: $black-100;
+		}
 	}
 	&-social-link {
 		@include font(1.7rem, calc(15 / 17));
 		font-weight: 600;
 		letter-spacing: 0.1em;
-		color: $white;
+		color: $black-100;
 		position: relative;
 		padding-left: 40px;
 		text-decoration: none;

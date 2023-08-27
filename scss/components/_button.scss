@@ -24,10 +24,11 @@
 		padding: 1.2857em 2em;
 		border: 1px solid $red-200;
 		border-radius: 32px;
-		color: $white;
+		color: $black-100;
 		background: transparent;
 		&:hover {
 			background: $red-200;
+			color: $white;
 		}
 	}
 }
