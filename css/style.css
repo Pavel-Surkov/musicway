@@ -989,4 +989,28 @@ a {
   max-width: 735px;
 }
 
+.teachers-all__wrapper {
+  padding-bottom: 120px;
+}
+.teachers-all-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 60px;
+  margin-bottom: 64px;
+}
+.teachers-all-top .title {
+  max-width: 310px;
+  font-size: 3.4rem;
+  line-height: 1.1764705882;
+}
+.teachers-all-top p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.teachers-all-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 60px 24px;
+}
+
 /*# sourceMappingURL=style.css.map */
