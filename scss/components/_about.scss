@@ -40,6 +40,24 @@
 				}
 			}
 		}
+		&-full {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 60px 24px;
+		}
+		&-text {
+			padding: 4px 0;
+			grid-column: span 3;
+			margin: 0 auto;
+			& .title {
+				text-align: center;
+				max-width: 420px;
+				letter-spacing: 0;
+				& span {
+					color: $red-100;
+				}
+			}
+		}
 	}
 	&-main {
 		display: grid;
