@@ -29,6 +29,29 @@
 		&:hover::after {
 			transform: translateY(-50%) translateX(8px);
 		}
+		&_back {
+			position: relative;
+			padding-left: 38px;
+			@include font(1.8rem, calc(29 / 18));
+			font-weight: 600;
+			color: $red-200;
+			letter-spacing: 0.03em;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: rotate(180deg) translateY(50%);
+				width: 28px;
+				height: 12.5px;
+				background: icon('arrow.svg') no-repeat 50% / cover;
+				will-change: transform;
+				transition: transform 0.2s;
+			}
+			&:hover::before {
+				transform: rotate(180deg) translateY(50%) translateX(8px);
+			}
+		}
 	}
 	&-social {
 		width: 38px;

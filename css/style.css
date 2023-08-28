@@ -320,6 +320,30 @@ a {
 .link-arrow:hover::after {
   transform: translateY(-50%) translateX(8px);
 }
+.link-arrow_back {
+  position: relative;
+  padding-left: 38px;
+  font-size: 1.8rem;
+  line-height: 1.6111111111;
+  font-weight: 600;
+  color: #ff0027;
+  letter-spacing: 0.03em;
+}
+.link-arrow_back::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: rotate(180deg) translateY(50%);
+  width: 28px;
+  height: 12.5px;
+  background: url("../assets/icons/arrow.svg") no-repeat 50%/cover;
+  will-change: transform;
+  transition: transform 0.2s;
+}
+.link-arrow_back:hover::before {
+  transform: rotate(180deg) translateY(50%) translateX(8px);
+}
 .link-social {
   width: 38px;
   height: 38px;
@@ -1080,6 +1104,85 @@ a {
   font-size: 1.2rem;
   line-height: 1.3333333333;
   color: #777;
+}
+
+.teacher-wrapper {
+  display: grid;
+  grid-template-columns: 5.1fr 6.5fr;
+  grid-gap: 40px;
+  padding-bottom: 85px;
+}
+.teacher-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.teacher-title {
+  margin-bottom: 12px;
+}
+.teacher-title_about {
+  margin-bottom: 16px;
+}
+.teacher-subtitle p {
+  font-size: 2rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.teacher-info {
+  border-radius: 10px;
+  background: #f4f4f4;
+  padding: 52px 40px 40px;
+}
+.teacher-info-wrapper {
+  grid-row: span 2;
+}
+.teacher-info-block {
+  padding: 38px 0;
+  position: relative;
+  border-bottom: 1.5px solid #ef1a2a;
+}
+.teacher-info-block:first-child {
+  padding-top: 0;
+}
+.teacher-info-block:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.teacher-info__text {
+  margin-bottom: 32px;
+}
+.teacher-info__text p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+.teacher-info__text p:last-child {
+  margin-bottom: 0;
+}
+.teacher-qualities {
+  margin-bottom: 26px;
+}
+.teacher-qualities:last-child {
+  margin-bottom: 0;
+}
+.teacher-qualities h4 {
+  font-size: 1.8rem;
+  line-height: 1.3333333333;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+.teacher-qualities p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.teacher-video {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.teacher-video video {
+  max-width: 510px;
 }
 
 .courses .about-wrapper {
