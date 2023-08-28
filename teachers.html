@@ -14,6 +14,7 @@
 	<meta property="og:url" content="" />
 	<meta property="og:image" content="" />
 	<title>Teachers page</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
@@ -165,8 +166,8 @@
 					<h2 class="students-title title title_size-m">Выступления наших учеников</h2>
 					<div class="students-videos">
 						<div class="video relative">
-							<video src="https://www.youtube.com/watch?v=owZiOi3KD58" poster="./assets/images/students-1.jpg"></video>
-							<button class="play-btn" aria-label="play">
+							<img src="./assets/images/students-1.jpg" alt="" />
+							<a href="./assets/videos/video-1.mp4" data-fancybox data-height="600" class="play-btn" aria-label="play">
 								<svg id="Component_1_1" data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" width="80"
 									height="79" viewBox="0 0 80 79">
 									<ellipse id="Ellipse_1" data-name="Ellipse 1" cx="40" cy="39.5" rx="40" ry="39.5" fill="#ff0027" />
@@ -174,13 +175,13 @@
 										d="M14.811,2.661a2,2,0,0,1,3.377,0L31.051,22.928A2,2,0,0,1,29.362,26H3.638a2,2,0,0,1-1.689-3.072Z"
 										transform="translate(56 23) rotate(90)" fill="#fff" />
 								</svg>
-							</button>
+							</a>
 							<p>Основатель школы, педагог по вокалу, Эмиль Кадыров,
 								финалист проекта «Голос»</p>
 						</div>
 						<div class="video relative">
-							<video src="https://www.youtube.com/watch?v=owZiOi3KD58" poster="./assets/images/students-2.jpg"></video>
-							<button class="play-btn" aria-label="play">
+							<img src="./assets/images/students-2.jpg" alt="" />
+							<a href="./assets/videos/video-1.mp4" data-fancybox data-height="600" class="play-btn" aria-label="play">
 								<svg id="Component_1_1" data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" width="80"
 									height="79" viewBox="0 0 80 79">
 									<ellipse id="Ellipse_1" data-name="Ellipse 1" cx="40" cy="39.5" rx="40" ry="39.5" fill="#ff0027" />
@@ -188,7 +189,7 @@
 										d="M14.811,2.661a2,2,0,0,1,3.377,0L31.051,22.928A2,2,0,0,1,29.362,26H3.638a2,2,0,0,1-1.689-3.072Z"
 										transform="translate(56 23) rotate(90)" fill="#fff" />
 								</svg>
-							</button>
+							</a>
 							<p>Основатель школы, педагог по вокалу, Эмиль Кадыров,
 								финалист проекта «Голос»</p>
 						</div>
@@ -279,6 +280,8 @@
 			</div>
 		</div>
 	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="js/main.js" defer></script>
 </body>
 

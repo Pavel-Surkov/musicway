@@ -71,10 +71,27 @@
 		}
 	}
 	&-video {
-		border-radius: 10px;
-		overflow: hidden;
-		& video {
+		position: relative;
+		& img {
+			border-radius: 10px;
+			overflow: hidden;
 			max-width: 510px;
+		}
+		&-modal {
+			& video {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&__btn {
+			color: $white;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			@include flex(row, center);
+			gap: 16px;
+			padding: 1em 2em;
 		}
 	}
 }
