@@ -429,6 +429,17 @@ a {
   line-height: 1;
 }
 
+@media screen and (max-width: 767px) {
+  .input-primary {
+    font-size: 1.6rem;
+    line-height: 1;
+    padding-bottom: 14px;
+  }
+  .input-primary::placeholder {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+}
 .video {
   display: flex;
   border-radius: 10px;
@@ -1136,12 +1147,14 @@ a {
   letter-spacing: 0.03em;
 }
 .contact-form__wrapper {
-  gap: 45px;
+  gap: 32px 45px;
+  display: grid;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  max-width: 760px;
   margin-bottom: 28px;
 }
 .contact-form__agreement p {
@@ -1162,9 +1175,50 @@ a {
   min-width: 210px;
 }
 .contact-form .btn-primary {
-  padding: 1.222em 2.27777em;
+  padding: 1.222em 2.2666em;
 }
 
+@media screen and (max-width: 991px) {
+  .contact {
+    background: #f4f4f4;
+  }
+  .contact-wrapper {
+    padding: 60px 0;
+  }
+  .contact-title {
+    max-width: 275px;
+    font-size: 2.2rem;
+    line-height: 1.2727272727;
+    margin-bottom: 16px;
+  }
+  .contact-subtitle {
+    max-width: 505px;
+    margin-bottom: 45px;
+  }
+  .contact-subtitle p {
+    font-size: 1.6rem;
+    line-height: 1.375;
+  }
+  .contact-form .btn-primary {
+    order: 1;
+    padding: 1.4em 2em;
+  }
+  .contact-form__wrapper {
+    margin: 0;
+    max-width: none;
+    grid-gap: 38px 28px;
+  }
+  .contact-form__wrapper input {
+    min-width: auto;
+    max-width: calc(50% - 14px);
+    flex-grow: 1;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contact-form__wrapper .btn-primary {
+    width: 100%;
+  }
+}
 .teachers-wrapper {
   padding: 90px 0 105px;
 }

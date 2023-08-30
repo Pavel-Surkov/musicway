@@ -11,3 +11,15 @@
 		}
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.input {
+		&-primary {
+			@include font(1.6rem, 1);
+			padding-bottom: 14px;
+			&::placeholder {
+				@include font(1.6rem, 1);
+			}
+		}
+	}
+}

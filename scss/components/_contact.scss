@@ -17,8 +17,10 @@
 	}
 	&-form {
 		&__wrapper {
-			gap: 45px;
-			@include flex(row, flex-end);
+			gap: 32px 45px;
+			display: grid;
+			@include flex(row, flex-end, flex-start, wrap);
+			max-width: 760px;
 			margin-bottom: 28px;
 		}
 		&__agreement {
@@ -39,7 +41,56 @@
 			min-width: 210px;
 		}
 		& .btn-primary {
-			padding: 1.222em 2.27777em;
+			padding: 1.222em 2.2666em;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.contact {
+		background: $light-100;
+		&-wrapper {
+			padding: 60px 0;
+		}
+		&-title {
+			max-width: 275px;
+			@include font(2.2rem, calc(28 / 22));
+			margin-bottom: 16px;
+		}
+		&-subtitle {
+			max-width: 505px;
+			margin-bottom: 45px;
+			& p {
+				@include font(1.6rem, calc(22 / 16));
+			}
+		}
+		&-form {
+			& .btn-primary {
+				order: 1;
+				padding: 1.4em 2em;
+			}
+			&__wrapper {
+				margin: 0;
+				max-width: none;
+				grid-gap: 38px 28px;
+				& input {
+					min-width: auto;
+					max-width: calc(50% - 14px);
+					flex-grow: 1;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.contact {
+		&-form {
+			&__wrapper {
+				& .btn-primary {
+					width: 100%;
+				}
+			}
 		}
 	}
 }
