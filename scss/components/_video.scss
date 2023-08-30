@@ -34,3 +34,22 @@
 		background: image('activity-fade.svg') no-repeat 50% / cover;
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.video {
+		& .play-btn {
+			width: 48px;
+			height: 48px;
+			display: grid;
+			place-items: center;
+			& svg {
+				width: inherit;
+				height: inherit;
+			}
+		}
+		& p {
+			padding: 36px 16px 20px;
+			@include font(1.4rem, calc(20 / 14));
+		}
+	}
+}

@@ -42,6 +42,12 @@ body {
   background: #fff;
   margin: 0;
 }
+@media screen and (max-width: 991px) {
+  body {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+  }
+}
 
 button, textarea, input, select {
   font-family: "Mont", Arial, sans-serif;
@@ -286,6 +292,10 @@ a {
     font-size: 2.4rem;
     line-height: 1.25;
   }
+  .title_size-m {
+    font-size: 2.2rem;
+    line-height: 1.2727272727;
+  }
 }
 .container {
   margin: 0 auto;
@@ -393,6 +403,18 @@ a {
   fill: #ef1a2a;
 }
 
+@media screen and (max-width: 991px) {
+  .link-arrow {
+    font-size: 1.4rem;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    padding-right: 33px;
+  }
+  .link-arrow::after {
+    width: 22.5px;
+    height: 10px;
+  }
+}
 .input-primary {
   padding: 0;
   padding-bottom: 18px;
@@ -445,6 +467,23 @@ a {
   background: url("../assets/images/activity-fade.svg") no-repeat 50%/cover;
 }
 
+@media screen and (max-width: 991px) {
+  .video .play-btn {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+  }
+  .video .play-btn svg {
+    width: inherit;
+    height: inherit;
+  }
+  .video p {
+    padding: 36px 16px 20px;
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+  }
+}
 .header {
   width: 100%;
   z-index: 10;
@@ -814,6 +853,9 @@ a {
   line-height: 1.3636363636;
   font-weight: 400;
 }
+.about-main__video-wrapper .link-arrow {
+  display: none;
+}
 .about-recommendations__star {
   top: -50px;
   left: 0;
@@ -847,6 +889,83 @@ a {
   right: 0;
 }
 
+@media screen and (max-width: 991px) {
+  .about {
+    margin-bottom: 60px;
+  }
+  .about-lessons {
+    margin-bottom: 45px;
+  }
+  .about-wrapper {
+    padding-top: 42px;
+  }
+  .about-micro {
+    display: none;
+  }
+  .about-top {
+    grid-template-columns: 100%;
+    grid-gap: 16px;
+    margin-bottom: 36px;
+  }
+  .about-title {
+    margin-bottom: 0;
+  }
+  .about-text p {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+  }
+  .about-lessons {
+    margin-right: calc((100vw - 100%) / -2);
+  }
+  .about-lessons-swiper {
+    padding-bottom: 0;
+  }
+  .about-lessons-swiper .swiper-slide {
+    width: auto;
+  }
+  .about-lessons-swiper .swiper-pagination {
+    display: none;
+  }
+  .about-main {
+    grid-template-columns: 100%;
+    grid-gap: 26px;
+    margin-bottom: 42px;
+  }
+  .about-main__content .title {
+    margin-bottom: 16px;
+    max-width: 310px;
+  }
+  .about-main__content .link-arrow {
+    display: none;
+  }
+  .about-main__text {
+    margin-bottom: 0;
+  }
+  .about-main__text p {
+    font-size: 1.4rem;
+    line-height: clac(20/14);
+  }
+  .about-main__video-wrapper .link-arrow {
+    display: inline-block;
+    margin-top: 20px;
+  }
+  .about-recommendations__star {
+    display: none;
+  }
+  .about-recommendations-wrapper {
+    margin-right: calc((100vw - 100%) / -2);
+  }
+  .about-recommendations .title {
+    margin-bottom: 16px;
+    max-width: 225px;
+  }
+  .about-recommendations .swiper-navigation {
+    display: none;
+  }
+  .about-recommendations-swiper .swiper-slide {
+    width: auto;
+  }
+}
 .activity-block {
   display: block;
   border-radius: 10px;
@@ -881,6 +1000,12 @@ a {
   background: url("../assets/icons/arrow.svg") no-repeat 50%/cover;
 }
 
+@media screen and (max-width: 767px) {
+  .activity-block {
+    max-width: 285px;
+    min-height: 325px;
+  }
+}
 .person-card {
   border-radius: 10px;
   overflow: hidden;
@@ -918,6 +1043,7 @@ a {
   object-fit: cover;
 }
 .person-card_small p {
+  font-weight: 600;
   z-index: 2;
   position: absolute;
   left: 0;
@@ -930,6 +1056,15 @@ a {
   background: url("../assets/images/activity-fade.svg") no-repeat 50%/cover;
 }
 
+@media screen and (max-width: 991px) {
+  .person-card_small p {
+    padding: 76px 20px 24px;
+    font-size: 2rem;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+  }
+}
 .advantages {
   margin-bottom: 120px;
 }

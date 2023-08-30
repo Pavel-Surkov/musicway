@@ -32,6 +32,7 @@
 			object-fit: cover;
 		}
 		& p {
+			font-weight: 600;
 			z-index: 2;
 			position: absolute;
 			left: 0;
@@ -41,6 +42,19 @@
 			@include font(2.4rem, calc(28 / 24));
 			color: $white;
 			background: image('activity-fade.svg') no-repeat 50% / cover;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.person-card {
+		&_small {
+			& p {
+				padding: 76px 20px 24px;
+				@include font(2rem, calc(22 / 20));
+				letter-spacing: 0.03em;
+				font-weight: 600;
+			}
 		}
 	}
 }

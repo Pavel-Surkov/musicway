@@ -32,3 +32,12 @@
 		}
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.activity {
+		&-block {
+			max-width: 285px;
+			min-height: 325px;
+		}
+	}
+}

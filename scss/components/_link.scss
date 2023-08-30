@@ -74,3 +74,17 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.link {
+		&-arrow {
+			@include font(1.4rem, 1);
+			letter-spacing: 0.03em;
+			padding-right: 33px;
+			&::after {
+				width: 22.5px;
+				height: 10px;
+			}
+		}
+	}
+}

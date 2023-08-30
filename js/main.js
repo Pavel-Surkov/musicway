@@ -13,20 +13,32 @@ const heroSwiper = new Swiper('.hero-swiper', {
 // About swiper
 const aboutSwiper = new Swiper('.about-lessons-swiper', {
   autoplay: true,
-  slidesPerView: 3,
-  spaceBetween: 24,
+  slidesPerView: 'auto',
+  spaceBetween: 15,
   pagination: {
     el: '.about-lessons-swiper .swiper-pagination',
+  },
+  breakpoints: {
+    990: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
   },
 });
 
 // Recommendations swiper
 const recommendationsSwiper = new Swiper('.about-recommendations-swiper', {
-  slidesPerView: 4,
-  spaceBetween: 20,
+  spaceBetween: 15,
+  slidesPerView: 'auto',
   navigation: {
     prevEl: '.about-recommendations-wrapper .swiper-navigation-prev',
     nextEl: '.about-recommendations-wrapper .swiper-navigation-next',
+  },
+  breakpoints: {
+    990: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
   },
 });
 

@@ -78,6 +78,13 @@
 				font-weight: 400;
 			}
 		}
+		&__video {
+			&-wrapper {
+				& .link-arrow {
+					display: none;
+				}
+			}
+		}
 	}
 	&-recommendations {
 		&__star {
@@ -112,5 +119,103 @@
 				right: 0;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.about {
+		margin-bottom: 60px;
+		&-lessons {
+			margin-bottom: 45px;
+		}
+		&-wrapper {
+			padding-top: 42px;
+		}
+		&-micro {
+			display: none;
+		}
+		&-top {
+			grid-template-columns: 100%;
+			grid-gap: 16px;
+			margin-bottom: 36px;
+		}
+		&-title {
+			margin-bottom: 0;
+		}
+		&-text {
+			& p {
+				@include font(1.4rem, calc(20 / 14));
+			}
+		}
+		&-lessons {
+			margin-right: calc((100vw - 100%) / -2);
+			&-swiper {
+				padding-bottom: 0;
+				& .swiper-slide {
+					width: auto;
+				}
+				& .swiper-pagination {
+					display: none;
+				}
+			}
+		}
+		&-main {
+			grid-template-columns: 100%;
+			grid-gap: 26px;
+			margin-bottom: 42px;
+			&__content {
+				& .title {
+					margin-bottom: 16px;
+					max-width: 310px;
+				}
+				& .link-arrow {
+					display: none;
+				}
+			}
+			&__text {
+				margin-bottom: 0;
+				& p {
+					@include font(1.4rem, clac(20/14));
+				}
+			}
+			&__video {
+				&-wrapper {
+					& .link-arrow {
+						display: inline-block;
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+		&-recommendations {
+			&__star {
+				display: none;
+			}
+			&-wrapper {
+				margin-right: calc((100vw - 100%) / -2);
+			}
+			& .title {
+				margin-bottom: 16px;
+				max-width: 225px;
+			}
+			& .swiper-navigation {
+				display: none;
+			}
+			&-swiper {
+				& .swiper-slide {
+					width: auto;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.about {
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.about {
 	}
 }
