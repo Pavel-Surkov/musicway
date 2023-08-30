@@ -53,12 +53,54 @@
 			background: icon('whatsapp.svg') no-repeat 50% / cover;
 		}
 	}
+	&-burger {
+		&__wrapper {
+			display: none;
+		}
+	}
 }
 
 @media screen and (max-width: 1280px) {
 	.header {
 		&-nav {
 			gap: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.header {
+		&-desktop {
+			display: none;
+		}
+		&-wrapper {
+			padding-top: 22px;
+		}
+		&-burger {
+			width: 30px;
+			height: 30px;
+			position: relative;
+			& span {
+				width: 100%;
+				height: 1.5px;
+				background: $white;
+				border-radius: 3px;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				&:first-child {
+					transform: translateY(calc(-50% - 4.5px));
+				}
+				&:last-child {
+					transform: translateY(calc(-50% + 4.5px));
+				}
+			}
+			&__wrapper {
+				display: block;
+			}
+		}
+		& .logo {
+			max-width: 150px;
 		}
 	}
 }

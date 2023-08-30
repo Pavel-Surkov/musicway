@@ -32,3 +32,12 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.btn {
+		&-primary {
+			@include font(1.5rem, 1);
+			padding: 1.466667em 2em;
+		}
+	}
+}

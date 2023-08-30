@@ -26,7 +26,7 @@
 				<a href="/" class="logo">
 					<img src="./assets/images/logo.svg" alt="logo" />
 				</a>
-				<div>
+				<div class="header-desktop">
 					<div class="header-top flex flex-end items-center">
 						<a href="https://wa.me/74955968097" class="header-social-link">+7(495)596-80-97</a>
 						<button class="btn-secondary">Запись на первый урок</button>
@@ -40,6 +40,12 @@
 						<a href="contacts.html" class="link header-nav__link">Контакты</a>
 					</nav>
 				</div>
+				<div class="header-burger__wrapper">
+					<button class="header-burger" aria-label="toggle menu">
+						<span></span>
+						<span></span>
+					</button>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -50,16 +56,25 @@
 				<div class="swiper-wrapper">
 					<!-- Slides -->
 					<div class="swiper-slide">
-						<img src="./assets/images/hero-pic.jpg"
-							srcset="./assets/images/hero-pic.jpg 1x, ./assets/images/hero-pic@2x.jpg 2x" alt="" />
+						<picture>
+							<source srcset="./assets/images/hero-pic-mobile.jpg" media="(max-width: 767px)" />
+							<img src="./assets/images/hero-pic.jpg"
+								srcset="./assets/images/hero-pic.jpg 1x, ./assets/images/hero-pic@2x.jpg 2x" alt="" />
+						</picture>
 					</div>
 					<div class="swiper-slide">
-						<img src="./assets/images/hero-pic.jpg"
-							srcset="./assets/images/hero-pic.jpg 1x, ./assets/images/hero-pic@2x.jpg 2x" alt="" />
+						<picture>
+							<source srcset="./assets/images/hero-pic-mobile.jpg" media="(max-width: 767px)" />
+							<img src="./assets/images/hero-pic.jpg"
+								srcset="./assets/images/hero-pic.jpg 1x, ./assets/images/hero-pic@2x.jpg 2x" alt="" />
+						</picture>
 					</div>
 					<div class="swiper-slide">
-						<img src="./assets/images/hero-pic.jpg"
-							srcset="./assets/images/hero-pic.jpg 1x, ./assets/images/hero-pic@2x.jpg 2x" alt="" />
+						<picture>
+							<source srcset="./assets/images/hero-pic-mobile.jpg" media="(max-width: 767px)" />
+							<img src="./assets/images/hero-pic.jpg"
+								srcset="./assets/images/hero-pic.jpg 1x, ./assets/images/hero-pic@2x.jpg 2x" alt="" />
+						</picture>
 					</div>
 				</div>
 				<div class="swiper-pagination"></div>

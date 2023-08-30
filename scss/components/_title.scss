@@ -17,3 +17,13 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.title {
+		&_size {
+			&-l {
+				@include font(2.4rem, calc(30 / 24));
+			}
+		}
+	}
+}

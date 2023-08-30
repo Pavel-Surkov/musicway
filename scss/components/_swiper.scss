@@ -16,3 +16,21 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.swiper {
+		& .swiper-pagination {
+			gap: 6px;
+			&-bullet {
+				height: 2px;
+				width: 14px;
+				background: $gray-100;
+				&-active {
+					height: 4px;
+					width: 16px;
+					background: rgba($red-300, 0.7);
+				}
+			}
+		}
+	}
+}
