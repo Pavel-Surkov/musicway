@@ -2,6 +2,7 @@
 	border-radius: 10px;
 	overflow: hidden;
 	position: relative;
+	display: block;
 	& img {
 		border-radius: 10px;
 		object-fit: cover;
@@ -48,6 +49,17 @@
 
 @media screen and (max-width: 991px) {
 	.person-card {
+		&__bottom {
+			padding: 62px 16px 24px;
+			min-height: 178px;
+			background: image('teachers-fade.svg') no-repeat 50% / cover;
+			& .title {
+				margin-bottom: 14px;
+			}
+			& p {
+				@include font(1.2rem, calc(18 / 12));
+			}
+		}
 		&_small {
 			& p {
 				padding: 76px 20px 24px;
@@ -56,5 +68,13 @@
 				font-weight: 600;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.person-card {
+		max-width: 285px;
+		min-width: auto;
+		width: auto;
 	}
 }

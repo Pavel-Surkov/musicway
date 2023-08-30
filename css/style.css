@@ -296,6 +296,10 @@ a {
     font-size: 2.2rem;
     line-height: 1.2727272727;
   }
+  .title_size-s {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
 }
 .container {
   margin: 0 auto;
@@ -1021,6 +1025,7 @@ a {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  display: block;
 }
 .person-card img {
   border-radius: 10px;
@@ -1068,12 +1073,31 @@ a {
 }
 
 @media screen and (max-width: 991px) {
+  .person-card__bottom {
+    padding: 62px 16px 24px;
+    min-height: 178px;
+    background: url("../assets/images/teachers-fade.svg") no-repeat 50%/cover;
+  }
+  .person-card__bottom .title {
+    margin-bottom: 14px;
+  }
+  .person-card__bottom p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
   .person-card_small p {
     padding: 76px 20px 24px;
     font-size: 2rem;
     line-height: 1.1;
     letter-spacing: 0.03em;
     font-weight: 600;
+  }
+}
+@media screen and (max-width: 767px) {
+  .person-card {
+    max-width: 285px;
+    min-width: auto;
+    width: auto;
   }
 }
 .advantages {
@@ -1230,6 +1254,9 @@ a {
   flex-wrap: nowrap;
   margin-bottom: 30px;
 }
+.teachers-bottom {
+  display: none;
+}
 .teachers-swiper {
   padding-bottom: 20px;
 }
@@ -1265,6 +1292,36 @@ a {
   right: 0;
 }
 
+@media screen and (max-width: 991px) {
+  .teachers-wrapper {
+    padding: 50px 0;
+  }
+  .teachers-top {
+    margin-bottom: 16px;
+  }
+  .teachers-top .link-arrow {
+    display: none;
+  }
+  .teachers-swiper {
+    padding: 0;
+  }
+  .teachers-swiper .swiper-slide {
+    width: auto;
+  }
+  .teachers-swiper-wrapper {
+    margin-right: calc((100vw - 100%) / -2);
+  }
+  .teachers-swiper-wrapper .swiper-navigation {
+    display: none;
+  }
+  .teachers-swiper-wrapper .swiper-pagination {
+    display: none;
+  }
+  .teachers-bottom {
+    display: block;
+    margin-top: 16px;
+  }
+}
 .price {
   background: #f4f4f4;
 }

@@ -6,6 +6,9 @@
 		@include flex(row, center, space-between);
 		margin-bottom: 30px;
 	}
+	&-bottom {
+		display: none;
+	}
 	&-swiper {
 		padding-bottom: 20px;
 		& .swiper-pagination {
@@ -40,6 +43,39 @@
 					right: 0;
 				}
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.teachers {
+		&-wrapper {
+			padding: 50px 0;
+		}
+		&-top {
+			margin-bottom: 16px;
+			& .link-arrow {
+				display: none;
+			}
+		}
+		&-swiper {
+			padding: 0;
+			& .swiper-slide {
+				width: auto;
+			}
+			&-wrapper {
+				margin-right: calc((100vw - 100%) / -2);
+				& .swiper-navigation {
+					display: none;
+				}
+				& .swiper-pagination {
+					display: none;
+				}
+			}
+		}
+		&-bottom {
+			display: block;
+			margin-top: 16px;
 		}
 	}
 }

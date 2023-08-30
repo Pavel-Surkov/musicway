@@ -44,13 +44,19 @@ const recommendationsSwiper = new Swiper('.about-recommendations-swiper', {
 
 // Teachers swiper
 const teachersSwiper = new Swiper('.teachers-swiper', {
-  slidesPerView: 3,
-  spaceBetween: 24,
+  slidesPerView: 'auto',
+  spaceBetween: 15,
   navigation: {
     prevEl: '.teachers-swiper-wrapper .swiper-navigation-prev',
     nextEl: '.teachers-swiper-wrapper .swiper-navigation-next',
   },
   pagination: {
     el: '.teachers-swiper .swiper-pagination',
+  },
+  breakpoints: {
+    990: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
   },
 });
