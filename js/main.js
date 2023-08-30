@@ -38,4 +38,7 @@ const teachersSwiper = new Swiper('.teachers-swiper', {
     prevEl: '.teachers-swiper-wrapper .swiper-navigation-prev',
     nextEl: '.teachers-swiper-wrapper .swiper-navigation-next',
   },
+  pagination: {
+    el: '.teachers-swiper .swiper-pagination',
+  },
 });

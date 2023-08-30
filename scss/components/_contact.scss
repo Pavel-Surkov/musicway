@@ -1,7 +1,7 @@
 .contact {
 	background: image('contact-bg.png') no-repeat 50% / cover;
 	&-wrapper {
-		padding: 118px 0;
+		padding: 96px 0;
 	}
 	&-title {
 		margin-bottom: 38px;
@@ -16,8 +16,25 @@
 		}
 	}
 	&-form {
-		@include flex(row, flex-end);
-		gap: 45px;
+		&__wrapper {
+			gap: 45px;
+			@include flex(row, flex-end);
+			margin-bottom: 28px;
+		}
+		&__agreement {
+			& p {
+				color: $gray-300;
+				@include font(1.4rem, calc(18 / 14));
+			}
+			& a {
+				color: $gray-300;
+				@include font(1.4rem, calc(18 / 14));
+				text-decoration: underline;
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
 		& input {
 			min-width: 210px;
 		}

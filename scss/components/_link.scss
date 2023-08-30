@@ -60,5 +60,17 @@
 		background: $light-200;
 		display: grid;
 		place-items: center;
+		&:hover {
+			background: $red-100;
+			& svg path {
+				fill: $white;
+			}
+		}
+		&:active {
+			opacity: 0.8;
+		}
+		&_youtube:hover svg path:last-child {
+			fill: $red-100;
+		}
 	}
 }

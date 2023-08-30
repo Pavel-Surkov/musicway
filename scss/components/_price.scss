@@ -15,7 +15,9 @@
 	&-item {
 		background: $white;
 		border-radius: 10px;
-		padding: 0 24px 22px;
+		padding: 0 24px 26px;
+		@include flex(column);
+		min-height: 285px;
 		&__icon {
 			min-height: 100px;
 			display: grid;
@@ -35,10 +37,9 @@
 			@include font(1.6rem, calc(24 / 16));
 			color: $gray-400;
 			display: inline-block;
-			margin-bottom: 56px;
 		}
 		&__price {
-			margin-bottom: 24px;
+			margin-top: auto;
 			& p {
 				@include font(3rem, calc(26 / 30));
 				letter-spacing: 0.03em;

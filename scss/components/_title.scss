@@ -4,7 +4,7 @@
 	margin: 0;
 	&_size {
 		&-l {
-			@include font(4rem, calc(44 / 40));
+			@include font(3.8rem, calc(44 / 38));
 			letter-spacing: 0.03em;
 		}
 		&-m {
