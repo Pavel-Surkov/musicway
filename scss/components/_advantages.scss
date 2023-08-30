@@ -25,3 +25,23 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.advantages {
+		margin-bottom: 60px;
+		&-content {
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 36px 18px;
+		}
+		&-item {
+			& img {
+				max-height: 90px;
+				margin-bottom: 14px;
+			}
+			& p {
+				@include font(1.3rem, calc(18 / 13));
+				letter-spacing: 0;
+			}
+		}
+	}
+}

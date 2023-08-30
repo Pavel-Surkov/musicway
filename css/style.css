@@ -1098,6 +1098,24 @@ a {
   max-width: 240px;
 }
 
+@media screen and (max-width: 991px) {
+  .advantages {
+    margin-bottom: 60px;
+  }
+  .advantages-content {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 36px 18px;
+  }
+  .advantages-item img {
+    max-height: 90px;
+    margin-bottom: 14px;
+  }
+  .advantages-item p {
+    font-size: 1.3rem;
+    line-height: 1.3846153846;
+    letter-spacing: 0;
+  }
+}
 .contact {
   background: url("../assets/images/contact-bg.png") no-repeat 50%/cover;
 }
