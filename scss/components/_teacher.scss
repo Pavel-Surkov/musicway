@@ -1,4 +1,7 @@
 .teacher {
+	&-swiper {
+		display: none;
+	}
 	&-wrapper {
 		display: grid;
 		grid-template-columns: 5.1fr 6.5fr;
@@ -75,7 +78,7 @@
 		& img {
 			border-radius: 10px;
 			overflow: hidden;
-			max-width: 510px;
+			max-width: 100%;
 		}
 		&-modal {
 			& video {
@@ -92,6 +95,100 @@
 			@include flex(row, center);
 			gap: 16px;
 			padding: 1em 2em;
+		}
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.teacher {
+		&-info {
+			&-wrapper {
+				flex-shrink: 0;
+			}
+		}
+		&-wrapper {
+			grid-template-columns: calc(45% - 20px) calc(55% - 20px);
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.teacher {
+		&-wrapper {
+			padding-bottom: 0;
+			margin-bottom: 60px;
+			grid-template-columns: 100%;
+			background: $light-100;
+			border-radius: 10px;
+			grid-gap: 36px;
+			& > .teacher-image,
+			& > .teacher-video {
+				display: none;
+			}
+		}
+		&-title {
+			padding-bottom: 16px;
+			border-bottom: 1px solid $red-100;
+			margin-bottom: 20px;
+			&_about {
+				@include font(2.2rem, 1);
+			}
+		}
+		&-subtitle {
+			& p {
+				@include font(1.4rem, calc(20 / 14));
+			}
+		}
+		&-swiper {
+			border-radius: 10px;
+			display: block;
+			margin: 0 -15px;
+			& .swiper-img__wrapper {
+				& img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			& .swiper-slide {
+				height: auto;
+			}
+			& .swiper-pagination {
+				bottom: 15px;
+			}
+		}
+		&-info {
+			padding: 20px 15px 30px;
+			&-block {
+				padding: 36px 0;
+				&:first-child {
+					border: 0;
+					padding: 0;
+					margin-bottom: 25px;
+				}
+			}
+			&__text {
+				margin-bottom: 28px;
+				& p {
+					@include font(1.4rem, calc(20 / 14));
+					margin-bottom: 20px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		&-qualities {
+			margin-bottom: 22px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			& h4 {
+				@include font(1.6rem, calc(20 / 16));
+			}
+			& p {
+				@include font(1.4rem, calc(20 / 14));
+			}
 		}
 	}
 }

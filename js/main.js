@@ -60,3 +60,12 @@ const teachersSwiper = new Swiper('.teachers-swiper', {
     },
   },
 });
+
+// Teacher swiper
+const teacherSwiper = new Swiper('.teacher-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 15,
+  pagination: {
+    el: '.teacher-swiper .swiper-pagination',
+  },
+});

@@ -418,6 +418,16 @@ a {
     width: 22.5px;
     height: 10px;
   }
+  .link-arrow_back {
+    font-size: 1.4rem;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    padding-left: 33px;
+  }
+  .link-arrow_back::before {
+    width: 22.5px;
+    height: 10px;
+  }
 }
 .input-primary {
   padding: 0;
@@ -1759,6 +1769,9 @@ a {
   color: #777;
 }
 
+.teacher-swiper {
+  display: none;
+}
 .teacher-wrapper {
   display: grid;
   grid-template-columns: 5.1fr 6.5fr;
@@ -1836,7 +1849,7 @@ a {
 .teacher-video img {
   border-radius: 10px;
   overflow: hidden;
-  max-width: 510px;
+  max-width: 100%;
 }
 .teacher-video-modal video {
   width: 100%;
@@ -1857,6 +1870,92 @@ a {
   padding: 1em 2em;
 }
 
+@media screen and (max-width: 1280px) {
+  .teacher-info-wrapper {
+    flex-shrink: 0;
+  }
+  .teacher-wrapper {
+    grid-template-columns: calc(45% - 20px) calc(55% - 20px);
+  }
+}
+@media screen and (max-width: 991px) {
+  .teacher-wrapper {
+    padding-bottom: 0;
+    margin-bottom: 60px;
+    grid-template-columns: 100%;
+    background: #f4f4f4;
+    border-radius: 10px;
+    grid-gap: 36px;
+  }
+  .teacher-wrapper > .teacher-image, .teacher-wrapper > .teacher-video {
+    display: none;
+  }
+  .teacher-title {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ef1a2a;
+    margin-bottom: 20px;
+  }
+  .teacher-title_about {
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+  .teacher-subtitle p {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+  }
+  .teacher-swiper {
+    border-radius: 10px;
+    display: block;
+    margin: 0 -15px;
+  }
+  .teacher-swiper .swiper-img__wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .teacher-swiper .swiper-slide {
+    height: auto;
+  }
+  .teacher-swiper .swiper-pagination {
+    bottom: 15px;
+  }
+  .teacher-info {
+    padding: 20px 15px 30px;
+  }
+  .teacher-info-block {
+    padding: 36px 0;
+  }
+  .teacher-info-block:first-child {
+    border: 0;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  .teacher-info__text {
+    margin-bottom: 28px;
+  }
+  .teacher-info__text p {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+    margin-bottom: 20px;
+  }
+  .teacher-info__text p:last-child {
+    margin-bottom: 0;
+  }
+  .teacher-qualities {
+    margin-bottom: 22px;
+  }
+  .teacher-qualities:last-child {
+    margin-bottom: 0;
+  }
+  .teacher-qualities h4 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+  .teacher-qualities p {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+  }
+}
 .about-hero {
   border-top: 1px solid rgba(112, 112, 112, 0.2);
   margin-bottom: 85px;

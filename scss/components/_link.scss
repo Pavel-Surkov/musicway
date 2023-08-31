@@ -85,6 +85,15 @@
 				width: 22.5px;
 				height: 10px;
 			}
+			&_back {
+				@include font(1.4rem, 1);
+				letter-spacing: 0.03em;
+				padding-left: 33px;
+				&::before {
+					width: 22.5px;
+					height: 10px;
+				}
+			}
 		}
 	}
 }
