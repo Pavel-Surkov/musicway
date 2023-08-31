@@ -531,7 +531,22 @@ a {
   gap: 46px;
 }
 .header-nav__link {
+  position: relative;
+  display: inline-block;
   color: #222;
+  font-weight: 600;
+}
+.header-nav__link.active {
+  color: #eb3335;
+}
+.header-nav__link.active::before {
+  position: absolute;
+  content: "";
+  top: calc(100% + 2px);
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #eb3335;
 }
 .header-social-link {
   font-size: 1.7rem;
@@ -580,7 +595,7 @@ a {
   .header-burger span {
     width: 100%;
     height: 1.5px;
-    background: #fff;
+    background: #222;
     border-radius: 3px;
     position: absolute;
     top: 50%;
@@ -597,6 +612,9 @@ a {
   }
   .header .logo {
     max-width: 150px;
+  }
+  .header-transparent .header-burger span {
+    background: #fff;
   }
 }
 .footer {
