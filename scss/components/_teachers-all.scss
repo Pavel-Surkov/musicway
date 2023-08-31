@@ -21,3 +21,44 @@
 		grid-gap: 60px 24px;
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.teachers-all {
+		&__wrapper {
+			padding-bottom: 60px;
+		}
+		&-top {
+			grid-template-columns: 100%;
+			grid-gap: 16px;
+			margin-bottom: 24px;
+			& .title {
+				@include font(2.2rem, calc(28 / 22));
+				max-width: 200px;
+			}
+			& p {
+				@include font(1.4rem, calc(20 / 14));
+			}
+		}
+		&-main {
+			grid-gap: 30px;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.teachers-all {
+		&-main {
+			grid-template-columns: 100%;
+			& .person-card {
+				display: block;
+				max-width: none;
+				&:last-child,
+				&:nth-last-child(2),
+				&:nth-last-child(3) {
+					display: none;
+				}
+			}
+		}
+	}
+}

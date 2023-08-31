@@ -31,3 +31,26 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.teachers-hero {
+		margin-bottom: 30px;
+		&-block {
+			& img {
+				min-height: 270px;
+			}
+		}
+		&__bottom {
+			padding: 45px 25px 20px;
+			background: linear-gradient(to top, rgba($black, 0.6), rgba($black, 0));
+			& .title {
+				@include font(2rem, calc(24 / 20));
+				letter-spacing: 0.05em;
+				margin-bottom: 8px;
+			}
+			& p {
+				@include font(1.3rem, calc(17 / 13));
+			}
+		}
+	}
+}
