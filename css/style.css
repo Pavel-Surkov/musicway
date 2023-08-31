@@ -1818,7 +1818,20 @@ a {
   margin: 0;
   font-weight: 600;
   color: #222;
-  margin-bottom: 34px;
+  margin-bottom: 26px;
+  font-size: 2.4rem;
+  line-height: 1.4166666667;
+}
+.about-hero-main .about-hero__text h3 {
+  margin: 0;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+.about-hero-main .about-hero__text h3 span {
+  color: #ef1a2a;
 }
 .about-hero-main .about-hero__text p {
   font-size: 1.6rem;
@@ -1877,6 +1890,8 @@ a {
   font-weight: 600;
   color: #222;
   margin-bottom: 16px;
+  font-size: 2.6rem;
+  line-height: 1.2307692308;
 }
 .about-hero-secondary .about-hero__text p {
   font-size: 1.6rem;
