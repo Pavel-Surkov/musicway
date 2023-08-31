@@ -1904,6 +1904,83 @@ a {
   object-fit: cover;
 }
 
+.about-advantages {
+  margin-bottom: 70px;
+}
+.about-advantages .title {
+  margin-bottom: 28px;
+  text-align: center;
+}
+.about-advantages-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+.about-advantages__card {
+  border-radius: 10px;
+  background: #f4f4f4;
+  padding: 50px 40px;
+  display: grid;
+  grid-template-columns: 3.65fr 1.21fr;
+  grid-gap: 0 20px;
+}
+.about-advantages__card .title {
+  text-align: left;
+  font-size: 2.6rem;
+  line-height: 1.2307692308;
+  letter-spacing: 0.03em;
+  margin-bottom: 24px;
+  grid-column: span 2;
+}
+.about-advantages__card p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  max-width: 335px;
+}
+.about-advantages__img {
+  display: grid;
+  align-items: end;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .about-advantages {
+    margin-bottom: 56px;
+  }
+  .about-advantages-wrapper {
+    grid-template-columns: 100%;
+    grid-gap: 20px;
+  }
+  .about-advantages .title {
+    margin-bottom: 20px;
+  }
+  .about-advantages__card {
+    grid-template-columns: 2.45fr 0.64fr;
+    grid-gap: 18px 12px;
+    padding: 20px 20px 30px;
+  }
+  .about-advantages__card .title {
+    margin-bottom: 0;
+    grid-column: span 1;
+    font-size: 1.8rem;
+    line-height: 1.3333333333;
+    align-self: center;
+  }
+  .about-advantages__card p {
+    order: 1;
+    grid-column: span 2;
+    max-width: none;
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+  }
+  .about-advantages__img {
+    align-items: start;
+    justify-items: end;
+  }
+  .about-advantages__img img {
+    max-height: 64px;
+  }
+}
 .courses .about-wrapper {
   padding-top: 70px;
 }
