@@ -647,6 +647,9 @@ a {
 .footer-middle .btn-secondary:hover {
   color: #fff;
 }
+.footer-middle .footer-bottom__social {
+  display: none;
+}
 .footer-mobile {
   display: none;
 }

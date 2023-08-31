@@ -35,6 +35,9 @@
 				color: $white;
 			}
 		}
+		& .footer-bottom__social {
+			display: none;
+		}
 	}
 	&-mobile {
 		display: none;
