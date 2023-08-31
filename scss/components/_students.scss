@@ -12,3 +12,18 @@
 		grid-gap: 20px;
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.students {
+		&-wrapper {
+			padding: 42px 0 60px;
+		}
+		&-title {
+			margin-bottom: 28px;
+		}
+		&-videos {
+			grid-template-columns: 100%;
+			grid-gap: 30px;
+		}
+	}
+}

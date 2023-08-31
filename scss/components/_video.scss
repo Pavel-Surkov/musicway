@@ -31,7 +31,7 @@
 		padding: 100px 33px 30px;
 		@include font(1.8rem, calc(28 / 18));
 		color: $white;
-		background: image('activity-fade.svg') no-repeat 50% / cover;
+		background: linear-gradient(to top, rgba($black, 0.8), rgba($black, 0));
 	}
 }
 
