@@ -1796,6 +1796,99 @@ a {
   padding: 1em 2em;
 }
 
+.about-hero {
+  border-top: 1px solid rgba(112, 112, 112, 0.2);
+  margin-bottom: 85px;
+}
+.about-hero-wrapper {
+  padding-top: 70px;
+}
+.about-hero__title {
+  margin-bottom: 32px;
+}
+.about-hero-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 75px;
+}
+.about-hero-main .about-hero__text {
+  padding-right: 60px;
+}
+.about-hero-main .about-hero__text h2 {
+  margin: 0;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 34px;
+}
+.about-hero-main .about-hero__text p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+.about-hero-main .about-hero__image img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-hero-secondary {
+  display: grid;
+  grid-template-columns: 3.85fr 7.6fr;
+  justify-items: center;
+  grid-gap: 56px;
+}
+.about-hero-secondary .about-hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  max-width: 720px;
+  padding-left: 40px;
+}
+.about-hero-secondary .about-hero__text q {
+  position: relative;
+  font-size: 1.8rem;
+  line-height: 1.6666666667;
+  quotes: none;
+  margin-bottom: 50px;
+}
+.about-hero-secondary .about-hero__text q::before {
+  position: absolute;
+  content: "";
+  left: -10px;
+  top: -5px;
+  width: 30px;
+  height: 22.5px;
+  background: url("../assets/icons/quotes-left.svg") no-repeat 50%/cover;
+  transform: translateX(-100%) translateY(6px);
+}
+.about-hero-secondary .about-hero__text q::after {
+  position: relative;
+  display: inline-block;
+  content: "";
+  width: 30px;
+  height: 22.5px;
+  background: url("../assets/icons/quotes-right.svg") no-repeat 50%/cover;
+  transform: translateY(6px);
+}
+.about-hero-secondary .about-hero__text h2 {
+  margin: 0;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 16px;
+}
+.about-hero-secondary .about-hero__text p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.about-hero-secondary .about-hero__image img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .courses .about-wrapper {
   padding-top: 70px;
 }

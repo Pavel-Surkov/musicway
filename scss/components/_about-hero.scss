@@ -1,0 +1,89 @@
+.about-hero {
+	border-top: 1px solid rgba($gray-500, 0.2);
+	margin-bottom: 85px;
+	&-wrapper {
+		padding-top: 70px;
+	}
+	&__title {
+		margin-bottom: 32px;
+	}
+	&-main {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 75px;
+		& .about-hero__text {
+			padding-right: 60px;
+			& h2 {
+				margin: 0;
+				font-weight: 600;
+				color: $black-100;
+				margin-bottom: 34px;
+			}
+			& p {
+				@include font(1.6rem, calc(24 / 16));
+				margin-bottom: 32px;
+			}
+		}
+		& .about-hero__image {
+			& img {
+				border-radius: 10px;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&-secondary {
+		display: grid;
+		grid-template-columns: 3.85fr 7.6fr;
+		justify-items: center;
+		grid-gap: 56px;
+		& .about-hero__text {
+			@include flex(column, flex-start, center);
+			max-width: 720px;
+			padding-left: 40px;
+			& q {
+				position: relative;
+				@include font(1.8rem, calc(30 / 18));
+				quotes: none;
+				margin-bottom: 50px;
+				&::before {
+					position: absolute;
+					content: '';
+					left: -10px;
+					top: -5px;
+					width: 30px;
+					height: 22.5px;
+					background: icon('quotes-left.svg') no-repeat 50% / cover;
+					transform: translateX(-100%) translateY(6px);
+				}
+				&::after {
+					position: relative;
+					display: inline-block;
+					content: '';
+					width: 30px;
+					height: 22.5px;
+					background: icon('quotes-right.svg') no-repeat 50% / cover;
+					transform: translateY(6px);
+				}
+			}
+			& h2 {
+				margin: 0;
+				font-weight: 600;
+				color: $black-100;
+				margin-bottom: 16px;
+			}
+			& p {
+				@include font(1.6rem, calc(24 / 16));
+			}
+		}
+		& .about-hero__image {
+			& img {
+				border-radius: 10px;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
