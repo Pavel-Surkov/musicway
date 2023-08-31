@@ -647,12 +647,18 @@ a {
 .footer-middle .btn-secondary:hover {
   color: #fff;
 }
+.footer-mobile {
+  display: none;
+}
 .footer-contacts {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
   flex-wrap: nowrap;
+}
+.footer-contacts br {
+  display: none;
 }
 .footer-contacts__tel {
   font-size: 2.2rem;
@@ -706,6 +712,93 @@ a {
   line-height: 1.5714285714;
 }
 
+@media screen and (max-width: 991px) {
+  .footer .logo {
+    display: none;
+  }
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px 4px;
+    padding: 50px 0;
+  }
+  .footer-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    order: -1;
+    margin: 0;
+  }
+  .footer-middle__btn {
+    display: none;
+  }
+  .footer-middle .footer-bottom__social {
+    display: flex;
+  }
+  .footer-top {
+    display: block;
+    margin: 0;
+  }
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    gap: 22px;
+  }
+  .footer-mobile {
+    display: block;
+    padding-top: 10px;
+    text-align: center;
+    grid-column: span 2;
+  }
+  .footer-mobile .btn-secondary {
+    width: 360px;
+    text-align: center;
+    max-width: 100%;
+  }
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    grid-column: span 2;
+  }
+  .footer-bottom__social {
+    display: none;
+  }
+  .footer-bottom p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer-contacts__tel {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    line-height: 1.2222222222;
+  }
+  .footer-contacts br {
+    display: inline;
+  }
+  .footer-contacts p, .footer-contacts a:last-child {
+    text-align: right;
+    font-size: 1.4rem;
+    line-height: 1.5714285714;
+  }
+  .footer-nav .link {
+    font-size: 1.4rem;
+    line-height: 1.0714285714;
+    letter-spacing: 0.05em;
+  }
+  .footer-bottom p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
 .hero {
   position: relative;
   background: #f7f4f4;

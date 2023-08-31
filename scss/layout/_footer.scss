@@ -36,8 +36,14 @@
 			}
 		}
 	}
+	&-mobile {
+		display: none;
+	}
 	&-contacts {
 		@include flex(column, flex-end);
+		& br {
+			display: none;
+		}
 		&__tel {
 			@include font(2.2rem, calc(24 / 22));
 			margin-bottom: 16px;
@@ -74,6 +80,90 @@
 			@include flex(row, flex-end, flex-end);
 			& p {
 				@include font(1.4rem, calc(22 / 14));
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.footer {
+		& .logo {
+			display: none;
+		}
+		&-wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 40px 4px;
+			padding: 50px 0;
+		}
+		&-middle {
+			@include flex(column, flex-end, space-between);
+			order: -1;
+			margin: 0;
+			&__btn {
+				display: none;
+			}
+			& .footer-bottom__social {
+				display: flex;
+			}
+		}
+		&-top {
+			display: block;
+			margin: 0;
+		}
+		&-nav {
+			@include flex(column, flex-end);
+			gap: 22px;
+		}
+		&-mobile {
+			display: block;
+			padding-top: 10px;
+			text-align: center;
+			grid-column: span 2;
+			& .btn-secondary {
+				width: 360px;
+				text-align: center;
+				max-width: 100%;
+			}
+		}
+		&-bottom {
+			@include flex(column, center);
+			grid-column: span 2;
+			&__social {
+				display: none;
+			}
+			& p {
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.footer {
+		&-contacts {
+			&__tel {
+				margin-bottom: 30px;
+				@include font(1.8rem, calc(22 / 18));
+			}
+			& br {
+				display: inline;
+			}
+			& p,
+			& a:last-child {
+				text-align: right;
+				@include font(1.4rem, calc(22 / 14));
+			}
+		}
+		&-nav {
+			& .link {
+				@include font(1.4rem, calc(15 / 14));
+				letter-spacing: 0.05em;
+			}
+		}
+		&-bottom {
+			& p {
+				@include font(1.2rem, calc(18 / 12));
 			}
 		}
 	}
