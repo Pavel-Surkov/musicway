@@ -2306,13 +2306,117 @@ a {
   }
 }
 @media screen and (max-width: 767px) {
+  .reviews {
+    margin-bottom: 60px;
+  }
   .reviews-video {
     max-height: 390px;
     max-width: 285px;
   }
+  .reviews-swiper {
+    padding: 0;
+  }
   .reviews-info p {
     font-size: 1.2rem;
     line-height: 1.5;
+  }
+}
+.faq {
+  margin-bottom: 100px;
+}
+.faq .title {
+  margin-bottom: 44px;
+  text-align: center;
+}
+.faq-item {
+  border-top: 0.5px solid rgba(112, 112, 112, 0.45);
+}
+.faq-item:last-child {
+  border-bottom: 0.5px solid rgba(112, 112, 112, 0.45);
+}
+.faq-item__btn {
+  padding: 24px 20px;
+  font-size: 2.4rem;
+  line-height: 1.3333333333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+  color: #222;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+.faq-item__plus {
+  position: relative;
+  border-radius: 50%;
+  width: 41px;
+  height: 41px;
+  transform: none;
+  transition: transform 0.2s;
+  will-change: transform;
+}
+.faq-item__plus span {
+  position: absolute;
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  left: 50%;
+  top: 50%;
+  background: #707070;
+}
+.faq-item__plus span:first-child {
+  transform: translate(-50%, -50%);
+}
+.faq-item__plus span:last-child {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.faq-item.opened .faq-item__plus {
+  transform: rotate(45deg);
+  background: #f4f4f4;
+}
+.faq-item.opened .faq-content {
+  display: block;
+}
+.faq-content {
+  display: none;
+  padding: 0 20px 24px;
+}
+.faq-content p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  max-width: 850px;
+}
+
+@media screen and (max-width: 991px) {
+  .faq {
+    margin-bottom: 70px;
+  }
+  .faq .title {
+    margin-bottom: 26px;
+  }
+  .faq-item__btn {
+    padding: 17px 11px;
+    font-size: 1.8rem;
+    line-height: 1.3333333333;
+  }
+  .faq-item__plus {
+    width: 29px;
+    height: 29px;
+  }
+  .faq-item__plus span {
+    width: 18px;
+  }
+  .faq-content {
+    padding: 0 11px 20px;
+    max-width: calc(100% - 29px - 15px);
+  }
+  .faq-content p {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
   }
 }
 .courses .about-wrapper {

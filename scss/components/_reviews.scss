@@ -103,9 +103,13 @@
 
 @media screen and (max-width: 767px) {
 	.reviews {
+		margin-bottom: 60px;
 		&-video {
 			max-height: 390px;
 			max-width: 285px;
+		}
+		&-swiper {
+			padding: 0;
 		}
 		&-info {
 			& p {

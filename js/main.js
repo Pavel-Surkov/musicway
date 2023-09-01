@@ -88,3 +88,16 @@ const reviewsSwiper = new Swiper('.reviews-swiper', {
     },
   },
 });
+
+// FAQ accordion
+(function initAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  if (!faqItems[0]) return;
+
+  faqItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('opened');
+    });
+  });
+})();

@@ -1,0 +1,94 @@
+.faq {
+	margin-bottom: 100px;
+	& .title {
+		margin-bottom: 44px;
+		text-align: center;
+	}
+	&-item {
+		border-top: 0.5px solid rgba($gray-500, 0.45);
+		&:last-child {
+			border-bottom: 0.5px solid rgba($gray-500, 0.45);
+		}
+		&__btn {
+			padding: 24px 20px;
+			@include font(2.4rem, calc(32 / 24));
+			@include flex(row, center, space-between);
+			gap: 15px;
+			color: $black-100;
+			font-weight: 600;
+			width: 100%;
+			text-align: left;
+			position: relative;
+		}
+		&__plus {
+			position: relative;
+			border-radius: 50%;
+			width: 41px;
+			height: 41px;
+			transform: none;
+			transition: transform 0.2s;
+			will-change: transform;
+			& span {
+				position: absolute;
+				display: inline-block;
+				width: 30px;
+				height: 1px;
+				left: 50%;
+				top: 50%;
+				background: $gray-500;
+				&:first-child {
+					transform: translate(-50%, -50%);
+				}
+				&:last-child {
+					transform: translate(-50%, -50%) rotate(90deg);
+				}
+			}
+		}
+		&.opened {
+			& .faq-item__plus {
+				transform: rotate(45deg);
+				background: $light-100;
+			}
+			& .faq-content {
+				display: block;
+			}
+		}
+	}
+	&-content {
+		display: none;
+		padding: 0 20px 24px;
+		& p {
+			@include font(1.6rem, calc(24 / 16));
+			max-width: 850px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.faq {
+		margin-bottom: 70px;
+		& .title {
+			margin-bottom: 26px;
+		}
+		&-item {
+			&__btn {
+				padding: 17px 11px;
+				@include font(1.8rem, calc(24 / 18));
+			}
+			&__plus {
+				width: 29px;
+				height: 29px;
+				& span {
+					width: 18px;
+				}
+			}
+		}
+		&-content {
+			padding: 0 11px 20px;
+			max-width: calc(100% - 29px - 15px);
+			& p {
+				@include font(1.4rem, calc(20 / 14));
+			}
+		}
+	}
+}
