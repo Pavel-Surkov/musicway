@@ -1,0 +1,116 @@
+.reviews {
+	margin-bottom: 70px;
+	& .title {
+		margin-bottom: 32px;
+	}
+	&-wrapper {
+		& .swiper-navigation {
+			position: absolute;
+			top: 50%;
+			width: 48px;
+			height: 48px;
+			background: $light-200;
+			border-radius: 50%;
+			display: grid;
+			place-items: center;
+			z-index: 2;
+			&:hover {
+				opacity: 0.8;
+			}
+			&-prev {
+				transform: translateY(-50%) translateX(-50%);
+				left: 0;
+			}
+			&-next {
+				transform: translateY(-50%) translateX(50%);
+				right: 0;
+			}
+		}
+	}
+	&-video {
+		& a {
+			display: inline-block;
+			width: 64px;
+			height: 64px;
+		}
+		& svg {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&-swiper {
+		padding-bottom: 20px;
+		& .swiper-pagination {
+			bottom: 0;
+			&-bullet {
+				background: #a7a7a7;
+				&-active {
+					background: #ff003f;
+				}
+			}
+		}
+		& .swiper-slide {
+			width: auto;
+		}
+	}
+	&-info {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 90px 33px 30px;
+		background: linear-gradient(0deg, rgba($black, 0.6), rgba($black, 0));
+		min-height: 244px;
+		& .title {
+			color: $white;
+			margin-bottom: 12px;
+		}
+		& p {
+			position: relative;
+			padding: 0;
+			background: transparent;
+			@include font(1.6rem, calc(24 / 16));
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.reviews {
+		& .title {
+			margin-bottom: 16px;
+			max-width: 200px;
+		}
+		&-swiper {
+			margin-right: calc((100vw - 100%) / -2);
+			& .swiper-pagination {
+				display: none;
+			}
+		}
+		&-wrapper {
+			& .swiper-navigation {
+				display: none;
+			}
+		}
+		&-info {
+			padding: 65px 16px 24px;
+			min-height: 178px;
+			& .title {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.reviews {
+		&-video {
+			max-height: 390px;
+			max-width: 285px;
+		}
+		&-info {
+			& p {
+				@include font(1.2rem, calc(18 / 12));
+			}
+		}
+	}
+}

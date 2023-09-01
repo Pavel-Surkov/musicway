@@ -69,3 +69,22 @@ const teacherSwiper = new Swiper('.teacher-swiper', {
     el: '.teacher-swiper .swiper-pagination',
   },
 });
+
+// Reviews swiper
+const reviewsSwiper = new Swiper('.reviews-swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 15,
+  pagination: {
+    el: '.reviews-swiper .swiper-pagination',
+  },
+  navigation: {
+    prevEl: '.reviews-wrapper .swiper-navigation-prev',
+    nextEl: '.reviews-wrapper .swiper-navigation-next',
+  },
+  breakpoints: {
+    990: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+  },
+});

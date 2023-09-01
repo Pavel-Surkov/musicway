@@ -2210,6 +2210,111 @@ a {
     max-height: 64px;
   }
 }
+.reviews {
+  margin-bottom: 70px;
+}
+.reviews .title {
+  margin-bottom: 32px;
+}
+.reviews-wrapper .swiper-navigation {
+  position: absolute;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  background: #f2f2f2;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+.reviews-wrapper .swiper-navigation:hover {
+  opacity: 0.8;
+}
+.reviews-wrapper .swiper-navigation-prev {
+  transform: translateY(-50%) translateX(-50%);
+  left: 0;
+}
+.reviews-wrapper .swiper-navigation-next {
+  transform: translateY(-50%) translateX(50%);
+  right: 0;
+}
+.reviews-video a {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.reviews-video svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.reviews-swiper {
+  padding-bottom: 20px;
+}
+.reviews-swiper .swiper-pagination {
+  bottom: 0;
+}
+.reviews-swiper .swiper-pagination-bullet {
+  background: #a7a7a7;
+}
+.reviews-swiper .swiper-pagination-bullet-active {
+  background: #ff003f;
+}
+.reviews-swiper .swiper-slide {
+  width: auto;
+}
+.reviews-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 90px 33px 30px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  min-height: 244px;
+}
+.reviews-info .title {
+  color: #fff;
+  margin-bottom: 12px;
+}
+.reviews-info p {
+  position: relative;
+  padding: 0;
+  background: transparent;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 991px) {
+  .reviews .title {
+    margin-bottom: 16px;
+    max-width: 200px;
+  }
+  .reviews-swiper {
+    margin-right: calc((100vw - 100%) / -2);
+  }
+  .reviews-swiper .swiper-pagination {
+    display: none;
+  }
+  .reviews-wrapper .swiper-navigation {
+    display: none;
+  }
+  .reviews-info {
+    padding: 65px 16px 24px;
+    min-height: 178px;
+  }
+  .reviews-info .title {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reviews-video {
+    max-height: 390px;
+    max-width: 285px;
+  }
+  .reviews-info p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
 .courses .about-wrapper {
   padding-top: 70px;
   border-top: 1px solid rgba(112, 112, 112, 0.2);
