@@ -89,10 +89,32 @@ const reviewsSwiper = new Swiper('.reviews-swiper', {
   },
 });
 
+const activeSlide = document.querySelector(
+  '.about-hero__swiper .swiper-count__first'
+);
+
 // About hero swiper
 const aboutHeroSwiper = new Swiper('.about-hero__swiper', {
   slidesPerView: 1,
   effect: 'fade',
+  autoplay: true,
+  speed: 1500,
+  loop: true,
+  allowTouchMove: false,
+  on: {
+    init: function (swiper) {
+      const slidesCount = document.querySelector(
+        '.about-hero__swiper .swiper-count__second'
+      );
+
+      if (!slidesCount) return;
+
+      slidesCount.innerHTML = swiper.slides.length;
+    },
+    slideChange: function (swiper) {
+      activeSlide.innerHTML = swiper.activeIndex + 1;
+    },
+  },
 });
 
 // FAQ accordion

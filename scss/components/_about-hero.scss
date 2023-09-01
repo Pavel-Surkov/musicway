@@ -12,6 +12,15 @@
 		&-wrapper {
 			position: relative;
 		}
+		& .swiper-count {
+			position: absolute;
+			right: 16px;
+			bottom: 18px;
+			color: $white;
+			@include font(1.6rem, 1);
+			letter-spacing: 0.03em;
+			z-index: 1;
+		}
 	}
 	&__slide {
 		border-radius: 10px;

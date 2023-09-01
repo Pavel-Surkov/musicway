@@ -2041,6 +2041,16 @@ a {
 .about-hero__swiper-wrapper {
   position: relative;
 }
+.about-hero__swiper .swiper-count {
+  position: absolute;
+  right: 16px;
+  bottom: 18px;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  z-index: 1;
+}
 .about-hero__slide {
   border-radius: 10px;
   overflow: hidden;
