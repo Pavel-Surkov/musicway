@@ -2035,9 +2035,24 @@ a {
 .about-hero__title {
   margin-bottom: 32px;
 }
+.about-hero__swiper {
+  border-radius: 10px;
+}
+.about-hero__swiper-wrapper {
+  position: relative;
+}
+.about-hero__slide {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about-hero__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .about-hero-main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   margin-bottom: 75px;
 }
 .about-hero-main .about-hero__text {

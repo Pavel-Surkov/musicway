@@ -14,6 +14,7 @@
 	<meta property="og:url" content="" />
 	<meta property="og:image" content="" />
 	<title>About page</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -68,9 +69,24 @@
 							</p>
 							<button type="button" class="btn-primary">Записаться на пробный урок</button>
 						</div>
-						<div class="about-hero__image">
-							<img src="./assets/images/about-hero-1.jpg"
-								srcset="./assets/images/about-hero-1.jpg 1x, ./assets/images/about-hero-1@2x.jpg 2x" alt="" />
+						<div class="about-hero__swiper-wrapper">
+							<div class="swiper about-hero__swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a class="about-hero__slide" data-fancybox data-caption="Single image"
+											href="./assets/images/about-hero-1.jpg" data-src="./assets/images/about-hero-1@2x.jpg">
+											<img src="./assets/images/about-hero-1.jpg"
+												srcset="./assets/images/about-hero-1.jpg 1x, ./assets/images/about-hero-1@2x.jpg 2x" alt="" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a class="about-hero__slide" data-fancybox href="./assets/images/about-hero-1.jpg"
+											data-src="./assets/images/about-hero-1@2x.jpg">
+											<img src="./assets/images/students-1.jpg" alt="" />
+										</a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="about-hero-secondary">
@@ -507,6 +523,11 @@
 			</div>
 		</div>
 	</footer>
+	<!-- Fancybox and Jquery CDN
+    This link get github repository -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<!-- Swiper  -->
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="js/main.js" defer></script>
 </body>

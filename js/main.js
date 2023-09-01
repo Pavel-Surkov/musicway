@@ -89,6 +89,12 @@ const reviewsSwiper = new Swiper('.reviews-swiper', {
   },
 });
 
+// About hero swiper
+const aboutHeroSwiper = new Swiper('.about-hero__swiper', {
+  slidesPerView: 1,
+  effect: 'fade',
+});
+
 // FAQ accordion
 (function initAccordion() {
   const faqItems = document.querySelectorAll('.faq-item');
