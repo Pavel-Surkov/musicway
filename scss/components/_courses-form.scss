@@ -38,3 +38,51 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.courses-form {
+		&__wrapper {
+			padding: 60px 0;
+		}
+		&__form {
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 50px 40px;
+			& .input_long {
+				grid-column: span 2;
+			}
+		}
+		&__terms {
+			grid-column: span 2;
+			& .btn-primary {
+				padding-top: 1.4446em;
+				padding-bottom: 1.4446em;
+				margin-bottom: 24px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.courses-form {
+		& .title {
+			margin-bottom: 16px;
+			max-width: 310px;
+		}
+		&__subtitle {
+			margin-bottom: 36px;
+			max-width: 300px;
+			& p {
+				@include font(1.4rem, calc(20 / 14));
+			}
+		}
+		&__form {
+			grid-template-columns: 100%;
+			& .input_long {
+				grid-column: span 1;
+			}
+		}
+		&__terms {
+			grid-column: span 1;
+		}
+	}
+}

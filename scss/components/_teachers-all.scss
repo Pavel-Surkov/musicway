@@ -53,11 +53,11 @@
 			& .person-card {
 				display: block;
 				max-width: none;
-				&:last-child,
-				&:nth-last-child(2),
-				&:nth-last-child(3) {
-					display: none;
-				}
+				// &:last-child,
+				// &:nth-last-child(2),
+				// &:nth-last-child(3) {
+				// 	display: none;
+				// }
 			}
 		}
 	}

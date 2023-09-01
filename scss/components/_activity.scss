@@ -15,7 +15,7 @@
 			bottom: 0;
 			width: 100%;
 			padding: 87px 26px 35px;
-			background: image('activity-fade.svg') no-repeat 50% / cover;
+			background: linear-gradient(0deg, rgba($black, 0.6), rgba($black, 0));
 			font-weight: 600;
 			@include font(2.6rem, calc(28 / 26));
 			letter-spacing: 0.03em;
@@ -29,6 +29,14 @@
 			right: 26px;
 			bottom: 40px;
 			background: icon('arrow.svg') no-repeat 50% / cover;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.activity {
+		&-block {
+			min-height: auto;
 		}
 	}
 }

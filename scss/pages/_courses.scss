@@ -1,8 +1,25 @@
 .courses {
 	& .about-wrapper {
 		padding-top: 70px;
+		border-top: 1px solid rgba($gray-500, 0.2);
 	}
 	& .about-micro {
 		top: 40px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.courses {
+		& .about {
+			&-micro {
+				display: none;
+			}
+			&-wrapper {
+				padding-top: 30px;
+			}
+			&-top {
+				grid-gap: 0;
+			}
+		}
 	}
 }
