@@ -20,6 +20,9 @@
 				}
 			}
 		}
+		& .swiper-slide {
+			height: auto;
+		}
 		&-wrapper {
 			& .swiper-navigation {
 				position: absolute;
