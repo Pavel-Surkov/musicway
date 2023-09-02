@@ -2068,6 +2068,9 @@ a {
 .about-hero-main .about-hero__text {
   padding-right: 60px;
 }
+.about-hero-main .about-hero__text-block {
+  display: none;
+}
 .about-hero-main .about-hero__text h2 {
   margin: 0;
   font-weight: 600;
@@ -2119,6 +2122,7 @@ a {
   line-height: 1.6666666667;
   quotes: none;
   margin-bottom: 50px;
+  color: #222;
 }
 .about-hero-secondary .about-hero__text q::before {
   position: absolute;
@@ -2158,6 +2162,98 @@ a {
   object-fit: cover;
 }
 
+@media screen and (max-width: 991px) {
+  .about-hero {
+    margin-bottom: 50px;
+  }
+  .about-hero-wrapper {
+    padding-top: 32px;
+  }
+  .about-hero__title {
+    font-size: 2.2rem;
+    line-height: 1.2727272727;
+    margin-bottom: 16px;
+  }
+  .about-hero-main {
+    grid-template-columns: 100%;
+    grid-gap: 30px;
+    margin-bottom: 60px;
+  }
+  .about-hero-main h3, .about-hero-main p, .about-hero-main .btn-primary {
+    display: none;
+  }
+  .about-hero-main .about-hero__text h2 {
+    font-size: 1.6rem;
+    line-height: 1.375;
+    margin: 0;
+  }
+  .about-hero-main .about-hero__text-block {
+    padding-top: 5px;
+    display: block;
+  }
+  .about-hero-main .about-hero__text-block h3 {
+    display: block;
+    margin: 0;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 16px;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .about-hero-main .about-hero__text-block h3 span {
+    color: #ef1a2a;
+  }
+  .about-hero-main .about-hero__text-block p {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+    margin-bottom: 26px;
+  }
+  .about-hero-main .about-hero__text-block .btn-primary {
+    display: inline-block;
+  }
+  .about-hero-secondary {
+    grid-template-columns: 100%;
+    grid-gap: 35px;
+  }
+  .about-hero-secondary .about-hero__text {
+    padding-left: 35px;
+  }
+  .about-hero-secondary .about-hero__text q {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 36px;
+  }
+  .about-hero-secondary .about-hero__text q::before {
+    width: 24px;
+    height: 18px;
+  }
+  .about-hero-secondary .about-hero__text q::after {
+    width: 24px;
+    height: 18px;
+    transform: translateY(4px);
+  }
+  .about-hero-secondary .about-hero__text h2 {
+    font-size: 1.8rem;
+    line-height: 1.3333333333;
+    margin-bottom: 10px;
+  }
+  .about-hero-secondary .about-hero__text p {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+  }
+  .about-hero__swiper .swiper-count {
+    font-size: 1.4rem;
+    line-height: 1;
+    right: 15px;
+    bottom: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-hero-main .about-hero__text-block .btn-primary {
+    width: 100%;
+  }
+}
 .about-advantages {
   margin-bottom: 70px;
 }

@@ -37,6 +37,9 @@
 		margin-bottom: 75px;
 		& .about-hero__text {
 			padding-right: 60px;
+			&-block {
+				display: none;
+			}
 			& h2 {
 				margin: 0;
 				font-weight: 600;
@@ -82,6 +85,7 @@
 				@include font(1.8rem, calc(30 / 18));
 				quotes: none;
 				margin-bottom: 50px;
+				color: $black-100;
 				&::before {
 					position: absolute;
 					content: '';
@@ -119,6 +123,104 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.about-hero {
+		margin-bottom: 50px;
+		&-wrapper {
+			padding-top: 32px;
+		}
+		&__title {
+			@include font(2.2rem, calc(28 / 22));
+			margin-bottom: 16px;
+		}
+		&-main {
+			grid-template-columns: 100%;
+			grid-gap: 30px;
+			margin-bottom: 60px;
+			& h3,
+			& p,
+			& .btn-primary {
+				display: none;
+			}
+			& .about-hero__text {
+				& h2 {
+					@include font(1.6rem, calc(22 / 16));
+					margin: 0;
+				}
+			}
+			& .about-hero__text-block {
+				padding-top: 5px;
+				display: block;
+				& h3 {
+					display: block;
+					margin: 0;
+					font-weight: 600;
+					color: $black-100;
+					margin-bottom: 16px;
+					@include font(2rem, calc(24 / 20));
+					& span {
+						color: $red-100;
+					}
+				}
+				& p {
+					display: block;
+					@include font(1.4rem, calc(20 / 14));
+					margin-bottom: 26px;
+				}
+				& .btn-primary {
+					display: inline-block;
+				}
+			}
+		}
+		&-secondary {
+			grid-template-columns: 100%;
+			grid-gap: 35px;
+			& .about-hero__text {
+				padding-left: 35px;
+				& q {
+					@include font(1.6rem, calc(24 / 16));
+					margin-bottom: 36px;
+					&::before {
+						width: 24px;
+						height: 18px;
+					}
+					&::after {
+						width: 24px;
+						height: 18px;
+						transform: translateY(4px);
+					}
+				}
+				& h2 {
+					@include font(1.8rem, calc(24 / 18));
+					margin-bottom: 10px;
+				}
+				& p {
+					@include font(1.4rem, calc(20 / 14));
+				}
+			}
+		}
+		&__swiper {
+			& .swiper-count {
+				@include font(1.4rem, 1);
+				right: 15px;
+				bottom: 14px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.about-hero {
+		&-main {
+			& .about-hero__text-block {
+				& .btn-primary {
+					width: 100%;
+				}
 			}
 		}
 	}
