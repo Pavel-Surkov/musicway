@@ -130,6 +130,10 @@ const reviewsSwiper = new Swiper('.reviews-swiper', {
     spaceBetween: 15,
     autoplay: true,
     speed: 1500,
+    navigation: {
+      prevEl: '.about-swiper__wrapper .swiper-navigation-prev',
+      nextEl: '.about-swiper__wrapper .swiper-navigation-next',
+    },
     on: {
       init: function (swiper) {
         const slidesCount = document.querySelector(
