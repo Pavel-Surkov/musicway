@@ -89,33 +89,63 @@ const reviewsSwiper = new Swiper('.reviews-swiper', {
   },
 });
 
-const activeSlide = document.querySelector(
-  '.about-hero__swiper .swiper-count__first'
-);
-
 // About hero swiper
-const aboutHeroSwiper = new Swiper('.about-hero__swiper', {
-  slidesPerView: 1,
-  effect: 'fade',
-  autoplay: true,
-  speed: 1500,
-  loop: true,
-  allowTouchMove: false,
-  on: {
-    init: function (swiper) {
-      const slidesCount = document.querySelector(
-        '.about-hero__swiper .swiper-count__second'
-      );
+(function initAboutHeroSwiper() {
+  const activeSlide = document.querySelector(
+    '.about-hero__swiper .swiper-count__first'
+  );
 
-      if (!slidesCount) return;
+  const aboutHeroSwiper = new Swiper('.about-hero__swiper', {
+    slidesPerView: 1,
+    effect: 'fade',
+    autoplay: true,
+    speed: 1500,
+    loop: true,
+    allowTouchMove: false,
+    on: {
+      init: function (swiper) {
+        const slidesCount = document.querySelector(
+          '.about-hero__swiper .swiper-count__second'
+        );
 
-      slidesCount.innerHTML = swiper.slides.length;
+        if (!slidesCount) return;
+
+        slidesCount.innerHTML = swiper.slides.length;
+      },
+      slideChange: function (swiper) {
+        activeSlide.innerHTML = swiper.activeIndex + 1;
+      },
     },
-    slideChange: function (swiper) {
-      activeSlide.innerHTML = swiper.activeIndex + 1;
+  });
+})();
+
+// About main swiper
+(function initAboutMainSwiper() {
+  const activeSlide = document.querySelector(
+    '.about-swiper__swiper .swiper-count__first'
+  );
+
+  const aboutMainSwiper = new Swiper('.about-swiper__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 15,
+    autoplay: true,
+    speed: 1500,
+    on: {
+      init: function (swiper) {
+        const slidesCount = document.querySelector(
+          '.about-swiper__swiper .swiper-count__second'
+        );
+
+        if (!slidesCount) return;
+
+        slidesCount.innerHTML = swiper.slides.length;
+      },
+      slideChange: function (swiper) {
+        activeSlide.innerHTML = swiper.activeIndex + 1;
+      },
     },
-  },
-});
+  });
+})();
 
 // FAQ accordion
 (function initAccordion() {

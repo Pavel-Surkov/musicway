@@ -1,0 +1,71 @@
+.about-swiper {
+	margin-bottom: 80px;
+	&__wrapper {
+		position: relative;
+	}
+	&__swiper {
+		border-radius: 10px;
+	}
+	&__slide {
+		display: flex;
+		position: relative;
+		border-radius: 10px;
+		overflow: hidden;
+		& img {
+			border-radius: 10px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&-text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			min-height: 200px;
+			background: linear-gradient(0deg, rgba($black, 0.6), rgba($black, 0));
+			padding: 76px 40px 36px;
+			padding-right: 100px;
+			& p {
+				@include font(3.8rem, calc(44 / 38));
+				color: $white;
+				font-weight: 600;
+				letter-spacing: 0.05em;
+			}
+		}
+	}
+	& .swiper-count {
+		z-index: 2;
+		position: absolute;
+		right: 28px;
+		bottom: 38px;
+		color: $white;
+		@include font(2rem, 1);
+		letter-spacing: 0.03em;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.about-swiper {
+		margin-bottom: 56px;
+		&__slide {
+			& img {
+				min-height: 270px;
+				max-width: none;
+			}
+			&-text {
+				min-height: 84px;
+				padding: 30px 15px 16px;
+				padding-right: 50px;
+				& p {
+					@include font(1.6rem, calc(20 / 16));
+				}
+			}
+		}
+		& .swiper-count {
+			@include font(1.4rem, 1);
+			right: 14px;
+			bottom: 17px;
+		}
+	}
+}
