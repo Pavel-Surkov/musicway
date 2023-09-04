@@ -20,10 +20,14 @@
 		}
 		&-title {
 			margin-bottom: 28px;
+			max-width: 200px;
 		}
 		&-videos {
 			grid-template-columns: 100%;
 			grid-gap: 30px;
+			& p {
+				@include font(1.2rem, calc(16 / 12));
+			}
 		}
 	}
 }

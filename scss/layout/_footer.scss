@@ -30,7 +30,7 @@
 			letter-spacing: 0.05em;
 			font-weight: 600;
 			color: $black-100;
-			padding: 20px 56px;
+			padding: 19px 56px;
 			&:hover {
 				color: $white;
 			}
@@ -127,6 +127,7 @@
 				width: 360px;
 				text-align: center;
 				max-width: 100%;
+				padding: 19px 40px;
 			}
 		}
 		&-bottom {

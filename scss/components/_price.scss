@@ -24,6 +24,7 @@
 			align-content: center;
 		}
 		&__title {
+			letter-spacing: 0.03em;
 			margin-bottom: 8px;
 			max-width: 210px;
 			& p {
@@ -79,6 +80,9 @@
 			& .link-arrow {
 				display: none;
 			}
+			& .title {
+				letter-spacing: 0.05em;
+			}
 		}
 	}
 }
@@ -91,6 +95,7 @@
 		}
 		&-item {
 			min-height: 220px;
+			padding: 0 20px 20px;
 			&__icon {
 				flex-shrink: 0;
 				min-height: 106px;
