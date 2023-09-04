@@ -39,3 +39,20 @@
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 20px;
 }
+
+@media screen and (max-width: 991px) {
+	.col-3 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.col-3 {
+		grid-template-columns: 100%;
+		grid-gap: 30px;
+	}
+	.col-2 {
+		grid-template-columns: 100%;
+		grid-gap: 30px;
+	}
+}
