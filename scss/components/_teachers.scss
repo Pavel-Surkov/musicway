@@ -62,12 +62,14 @@
 			}
 		}
 		&-swiper {
-			padding: 0;
+			padding: 0 15px;
+			padding-left: calc((100vw - 720px) / 2);
 			& .swiper-slide {
 				width: auto;
 			}
 			&-wrapper {
 				margin-right: calc((100vw - 100%) / -2);
+				margin-left: calc((100vw - 100%) / -2);
 				& .swiper-navigation {
 					display: none;
 				}
@@ -79,6 +81,22 @@
 		&-bottom {
 			display: block;
 			margin-top: 16px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.teachers {
+		&-swiper {
+			padding-left: calc((100vw - 528px) / 2);
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.teachers {
+		&-swiper {
+			padding: 0 15px;
 		}
 	}
 }

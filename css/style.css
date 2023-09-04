@@ -1089,10 +1089,12 @@ a {
     line-height: 1.4285714286;
   }
   .about-lessons {
+    margin-left: calc((100vw - 100%) / -2);
     margin-right: calc((100vw - 100%) / -2);
   }
   .about-lessons-swiper {
-    padding-bottom: 0;
+    padding: 0 15px;
+    padding-left: calc((100vw - 720px) / 2);
   }
   .about-lessons-swiper .swiper-slide {
     width: auto;
@@ -1128,6 +1130,7 @@ a {
   }
   .about-recommendations-wrapper {
     margin-right: calc((100vw - 100%) / -2);
+    margin-left: calc((100vw - 100%) / -2);
   }
   .about-recommendations .title {
     margin-bottom: 16px;
@@ -1135,6 +1138,10 @@ a {
   }
   .about-recommendations .swiper-navigation {
     display: none;
+  }
+  .about-recommendations-swiper {
+    padding: 0 15px;
+    padding-left: calc((100vw - 720px) / 2);
   }
   .about-recommendations-swiper .swiper-slide {
     width: auto;
@@ -1147,6 +1154,17 @@ a {
   .about-lessons-full .activity-block {
     max-width: 100%;
     width: 100%;
+  }
+  .about-lessons-swiper {
+    padding-left: calc((100vw - 528px) / 2);
+  }
+  .about-recommendations-swiper {
+    padding-left: calc((100vw - 528px) / 2);
+  }
+}
+@media screen and (max-width: 576px) {
+  .about-recommendations-swiper, .about-lessons-swiper {
+    padding: 0 15px;
   }
 }
 .activity-block {
@@ -1491,13 +1509,15 @@ a {
     display: none;
   }
   .teachers-swiper {
-    padding: 0;
+    padding: 0 15px;
+    padding-left: calc((100vw - 720px) / 2);
   }
   .teachers-swiper .swiper-slide {
     width: auto;
   }
   .teachers-swiper-wrapper {
     margin-right: calc((100vw - 100%) / -2);
+    margin-left: calc((100vw - 100%) / -2);
   }
   .teachers-swiper-wrapper .swiper-navigation {
     display: none;
@@ -1508,6 +1528,16 @@ a {
   .teachers-bottom {
     display: block;
     margin-top: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .teachers-swiper {
+    padding-left: calc((100vw - 528px) / 2);
+  }
+}
+@media screen and (max-width: 576px) {
+  .teachers-swiper {
+    padding: 0 15px;
   }
 }
 .price {
@@ -2451,10 +2481,15 @@ a {
     max-width: 200px;
   }
   .reviews-swiper {
-    margin-right: calc((100vw - 100%) / -2);
+    padding: 0 15px;
+    padding-left: calc((100vw - 720px) / 2);
   }
   .reviews-swiper .swiper-pagination {
     display: none;
+  }
+  .reviews-wrapper {
+    margin-right: calc((100vw - 100%) / -2);
+    margin-left: calc((100vw - 100%) / -2);
   }
   .reviews-wrapper .swiper-navigation {
     display: none;
@@ -2476,11 +2511,16 @@ a {
     max-width: 285px;
   }
   .reviews-swiper {
-    padding: 0;
+    padding-left: calc((100vw - 528px) / 2);
   }
   .reviews-info p {
     font-size: 1.2rem;
     line-height: 1.5;
+  }
+}
+@media screen and (max-width: 576px) {
+  .reviews-swiper {
+    padding: 0 15px;
   }
 }
 .faq {
@@ -2699,6 +2739,14 @@ a {
 .prices-section {
   margin-bottom: 60px;
 }
+.prices-section_large {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.prices-section_large .prices-section__title {
+  grid-column: span 2;
+}
 .prices-section__title {
   font-size: 2.6rem;
   line-height: 1.2727272727;
@@ -2708,6 +2756,41 @@ a {
 }
 .prices-section__wrapper > .prices-section {
   margin-bottom: 0;
+}
+.prices-section__wrapper.col-3 .prices-section__title {
+  grid-column: span 3;
+}
+.prices-section__wrapper.col-3 .price-item__icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 17px;
+}
+.prices-section__wrapper.col-3 .price-item__title {
+  margin: 0;
+}
+.prices-section__wrapper.col-3 .price-item {
+  min-height: 235px;
+}
+.prices-form {
+  background: #fff;
+  padding: 60px 55px;
+  border-radius: 10px;
+  font-size: column;
+  line-height: center;
+}
+.prices-form .title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.prices-form__form {
+  margin: 0 auto;
+  max-width: 1090px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 60px 50px;
 }
 
 .courses .about-wrapper {

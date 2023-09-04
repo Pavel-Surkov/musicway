@@ -81,12 +81,15 @@
 			max-width: 200px;
 		}
 		&-swiper {
-			margin-right: calc((100vw - 100%) / -2);
+			padding: 0 15px;
+			padding-left: calc((100vw - 720px) / 2);
 			& .swiper-pagination {
 				display: none;
 			}
 		}
 		&-wrapper {
+			margin-right: calc((100vw - 100%) / -2);
+			margin-left: calc((100vw - 100%) / -2);
 			& .swiper-navigation {
 				display: none;
 			}
@@ -109,12 +112,20 @@
 			max-width: 285px;
 		}
 		&-swiper {
-			padding: 0;
+			padding-left: calc((100vw - 528px) / 2);
 		}
 		&-info {
 			& p {
 				@include font(1.2rem, calc(18 / 12));
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.reviews {
+		&-swiper {
+			padding: 0 15px;
 		}
 	}
 }

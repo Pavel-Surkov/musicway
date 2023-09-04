@@ -19,6 +19,14 @@
 	}
 	&-section {
 		margin-bottom: 60px;
+		&_large {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 20px;
+			& .prices-section__title {
+				grid-column: span 2;
+			}
+		}
 		&__title {
 			@include font(2.6rem, calc(28 / 22));
 		}
@@ -27,6 +35,38 @@
 			& > .prices-section {
 				margin-bottom: 0;
 			}
+			&.col-3 {
+				& .prices-section__title {
+					grid-column: span 3;
+				}
+				& .price-item__icon-wrapper {
+					@include flex(row, center);
+					gap: 17px;
+				}
+				& .price-item__title {
+					margin: 0;
+				}
+				& .price-item {
+					min-height: 235px;
+				}
+			}
+		}
+	}
+	&-form {
+		background: $white;
+		padding: 60px 55px;
+		border-radius: 10px;
+		@include font(column, center);
+		& .title {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		&__form {
+			margin: 0 auto;
+			max-width: 1090px;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 60px 50px;
 		}
 	}
 }

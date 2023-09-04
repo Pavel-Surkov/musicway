@@ -156,9 +156,11 @@
 			}
 		}
 		&-lessons {
+			margin-left: calc((100vw - 100%) / -2);
 			margin-right: calc((100vw - 100%) / -2);
 			&-swiper {
-				padding-bottom: 0;
+				padding: 0 15px;
+				padding-left: calc((100vw - 720px) / 2);
 				& .swiper-slide {
 					width: auto;
 				}
@@ -201,6 +203,7 @@
 			}
 			&-wrapper {
 				margin-right: calc((100vw - 100%) / -2);
+				margin-left: calc((100vw - 100%) / -2);
 			}
 			& .title {
 				margin-bottom: 16px;
@@ -210,6 +213,8 @@
 				display: none;
 			}
 			&-swiper {
+				padding: 0 15px;
+				padding-left: calc((100vw - 720px) / 2);
 				& .swiper-slide {
 					width: auto;
 				}
@@ -230,11 +235,25 @@
 					width: 100%;
 				}
 			}
+			&-swiper {
+				padding-left: calc((100vw - 528px) / 2);
+			}
+		}
+		&-recommendations {
+			&-swiper {
+				padding-left: calc((100vw - 528px) / 2);
+			}
 		}
 	}
 }
 
 @media screen and (max-width: 576px) {
 	.about {
+		&-recommendations,
+		&-lessons {
+			&-swiper {
+				padding: 0 15px;
+			}
+		}
 	}
 }
