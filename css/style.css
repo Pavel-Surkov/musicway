@@ -979,6 +979,9 @@ a {
   line-height: 1.5;
   font-weight: 400;
 }
+.about-advantages__img {
+  flex-shrink: 0;
+}
 .about-lessons {
   margin-bottom: 90px;
 }
@@ -1827,7 +1830,7 @@ a {
   font-size: 1.8rem;
   line-height: 1.5;
   color: #fff;
-  max-width: 735px;
+  max-width: 760px;
 }
 
 @media screen and (max-width: 991px) {

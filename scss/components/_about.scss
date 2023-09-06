@@ -26,6 +26,11 @@
 			font-weight: 400;
 		}
 	}
+	&-advantages {
+		&__img {
+			flex-shrink: 0;
+		}
+	}
 	&-lessons {
 		margin-bottom: 90px;
 		&-swiper {
