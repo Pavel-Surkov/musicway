@@ -1,0 +1,128 @@
+.contacts {
+	padding: 70px 0 140px;
+	&-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 60px;
+	}
+	&-title {
+		margin-bottom: 22px;
+	}
+	&-info {
+		&__wrapper {
+			padding-bottom: 40px;
+		}
+		&__block {
+			display: grid;
+			grid-template-columns: 100px auto;
+			grid-gap: 3px;
+			margin-bottom: 24px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&.social {
+				align-items: center;
+			}
+			& span {
+				color: $black-100;
+				@include font(1.6rem, calc(24 / 16));
+				font-weight: 600;
+			}
+			& p {
+				color: $black-100;
+				@include font(1.6rem, calc(24 / 16));
+			}
+			& .tel {
+				color: $black-100;
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+			& .email {
+				color: $red-100;
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+		&__social {
+			@include flex(row, center);
+			gap: 12px;
+		}
+		&__text {
+			padding-top: 40px;
+			border-top: 1.5px solid $red-100;
+			margin-bottom: 24px;
+			& > .title {
+				@include font(2.6rem, calc(30 / 26));
+				margin-bottom: 26px;
+				letter-spacing: 0;
+			}
+			& p {
+				@include font(1.6rem, calc(24 / 16));
+				margin-bottom: 24px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__link {
+			@include font(1.8rem, calc(24 / 18));
+			font-weight: 600;
+			letter-spacing: 0.03em;
+			color: $red-100;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	&-map {
+		& iframe {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.contacts {
+		padding: 30px 0 60px;
+		&-wrapper {
+			grid-template-columns: 100%;
+			grid-gap: 40px;
+		}
+		&-info {
+			&__wrapper {
+				padding-bottom: 45px;
+			}
+			&__block {
+				grid-template-columns: 96px auto;
+				grid-gap: 4px;
+				& span {
+					@include font(1.4rem, calc(24 / 14));
+				}
+				& p {
+					@include font(1.4rem, calc(24 / 14));
+				}
+			}
+			&__text {
+				margin-bottom: 20px;
+				& > .title {
+					@include font(2rem, calc(24 / 20));
+					margin-bottom: 26px;
+				}
+				& p {
+					@include font(1.4rem, calc(24 / 14));
+				}
+			}
+			&__link {
+				@include font(1.4rem, 1);
+				letter-spacing: 0.03em;
+			}
+		}
+		&-map {
+			& iframe {
+				height: 354px;
+			}
+		}
+	}
+}
