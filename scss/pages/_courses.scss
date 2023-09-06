@@ -1,7 +1,9 @@
 .courses {
-	& .about-wrapper {
-		padding-top: 70px;
+	& .about {
 		border-top: 1px solid rgba($gray-500, 0.2);
+		&-wrapper {
+			padding-top: 70px;
+		}
 	}
 	& .about-micro {
 		top: 40px;

@@ -1,0 +1,210 @@
+.course {
+	padding: 70px 0 100px;
+	&-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 60px;
+	}
+	&-title {
+		margin-bottom: 26px;
+	}
+	&-video {
+		margin-bottom: 60px;
+		& .title {
+			@include font(2.4rem, calc(32 / 24));
+			margin-bottom: 8px;
+		}
+		& .reviews-info {
+			padding: 130px 24px 24px;
+		}
+	}
+	&-additional {
+		&__title {
+			@include font(2.6rem, 1);
+			letter-spacing: 0.05em;
+			margin-bottom: 26px;
+		}
+		&__price {
+			display: grid;
+			grid-gap: 30px;
+			margin-bottom: 50px;
+			& .price-item {
+				padding-top: 24px;
+				min-height: 212px;
+				background: $light-100;
+				&__title {
+					max-width: 235px;
+				}
+				&__icon {
+					min-height: auto;
+				}
+				&__icon-wrapper {
+					gap: 15px;
+					width: 100%;
+					min-height: auto;
+					@include flex(row, center, space-between);
+				}
+			}
+		}
+		& > .btn-primary {
+			display: none;
+		}
+	}
+	&-info {
+		&__top {
+			padding-bottom: 45px;
+			border-bottom: 1.5px solid $red-100;
+			&-text {
+				margin-bottom: 24px;
+				& p {
+					@include font(1.6rem, calc(24 / 16));
+					margin-bottom: 24px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+			& > .title {
+				letter-spacing: 0;
+				@include font(2.2rem, calc(30 / 22));
+				max-width: 480px;
+			}
+		}
+		&__bottom {
+			padding-top: 50px;
+			& > .title {
+				@include font(2.6rem, calc(32 / 26));
+				max-width: 360px;
+				letter-spacing: 0;
+				margin-bottom: 26px;
+			}
+		}
+		&__list {
+			margin-bottom: 50px;
+			& li {
+				@include font(1.6rem, calc(24 / 16));
+				margin-bottom: 24px;
+				position: relative;
+				padding-left: 34px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&::before {
+					@include before(0, 20px, 2px);
+					background: $red-100;
+					transform: none;
+					top: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.course {
+		padding: 30px 0 60px;
+		&-wrapper {
+			grid-template-columns: 100%;
+			grid-gap: 50px;
+		}
+		&-title {
+			margin-bottom: 16px;
+		}
+		&-video {
+			display: none;
+		}
+		&-info {
+			& > .course-video {
+				display: block;
+				margin-bottom: 30px;
+				& .title {
+					@include font(1.8rem, clac(26/18));
+					margin-bottom: 10px;
+				}
+				& p {
+					@include font(1.2rem, calc(18 / 12));
+				}
+			}
+			&__top {
+				padding-bottom: 40px;
+				&-text {
+					& p {
+						@include font(1.4rem, calc(20 / 14));
+						margin-bottom: 20px;
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+				& > .title {
+					@include font(1.8rem, calc(24 / 18));
+					max-width: 280px;
+				}
+			}
+			&__bottom {
+				padding-top: 40px;
+				& > .title {
+					@include font(1.8rem, calc(24 / 18));
+					margin-bottom: 20px;
+					max-width: 246px;
+				}
+				& > .btn-primary {
+					display: none;
+				}
+			}
+			&__list {
+				margin-bottom: 0;
+				& li {
+					@include font(1.4rem, calc(20 / 14));
+					margin-bottom: 20px;
+					padding-left: 30px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+					&::before {
+						@include before(0, 18px, 2px);
+					}
+				}
+			}
+		}
+		&-additional {
+			@include flex(column);
+			&__price {
+				width: 100%;
+				& .price-item {
+					min-height: 220px;
+					&__title {
+						margin-bottom: 0;
+						& p {
+							@include font(1.8rem, calc(24 / 18));
+						}
+					}
+					&__icon {
+						order: -1;
+						width: 60px;
+						height: 60px;
+						&-wrapper {
+							@include flex(row, center);
+							margin-bottom: 20px;
+						}
+					}
+					&__price {
+						& p {
+							@include font(2.8rem, 1);
+						}
+					}
+				}
+			}
+			& > .btn-primary {
+				min-width: 360px;
+				padding: 1.466667em 2em 1.4em;
+				display: inline-block;
+				margin-bottom: 40px;
+			}
+			&__title {
+				@include font(2rem, 1);
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
