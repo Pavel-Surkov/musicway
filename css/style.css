@@ -548,6 +548,7 @@ a {
   width: 100%;
   z-index: 10;
   margin-bottom: 46px;
+  position: relative;
 }
 .header-transparent {
   margin-bottom: 0;
@@ -633,7 +634,7 @@ a {
     display: none;
   }
   .header-wrapper {
-    padding-top: 18 px;
+    padding-top: 18px;
   }
   .header-burger {
     width: 30px;
@@ -869,6 +870,113 @@ a {
     line-height: 1.5;
   }
 }
+.menu {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #f4f4f4;
+  z-index: 10;
+  transform: translateX(100%);
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+}
+.menu.opened {
+  transform: translateX(0);
+}
+.menu-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-top: 18px;
+  margin-bottom: 18px;
+  width: 100%;
+}
+.menu .container {
+  height: 100%;
+}
+.menu-wrapper {
+  height: 100%;
+}
+.menu-close {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.menu-close__btn {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+}
+.menu-close__btn span {
+  background: #333;
+  display: inline-block;
+  position: absolute;
+  width: 30px;
+  height: 1.5px;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.menu-close__btn span:first-child {
+  transform: translate(-4px, -50%) rotate(45deg);
+}
+.menu-close__btn span:last-child {
+  transform: translate(-4px, -50%) rotate(-45deg);
+}
+.menu-content {
+  flex-grow: 1;
+  padding-top: 90px;
+  padding-bottom: 60px;
+}
+.menu-content__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 22px;
+  margin-bottom: 85px;
+}
+.menu-content__nav .header-nav__link {
+  color: #222;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.menu-content__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 14px;
+}
+.menu-content__contacts .header-social-link {
+  color: #222;
+  font-size: 1.8rem;
+  line-height: 1.2222222222;
+  font-weight: 600;
+  padding-left: 26px;
+}
+.menu-content__contacts .header-social-link::before {
+  width: 20px;
+  height: 20px;
+}
+.menu-content__contacts .contact-link {
+  font-size: 1.6rem;
+  line-height: 1;
+  text-decoration: underline;
+  color: #222;
+  letter-spacing: 0.05em;
+}
+
 .hero {
   position: relative;
   background: #f7f4f4;

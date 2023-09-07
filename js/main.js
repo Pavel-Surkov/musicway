@@ -163,3 +163,25 @@ const reviewsSwiper = new Swiper('.reviews-swiper', {
     });
   });
 })();
+
+// Mobile menu handle
+(function handleMenu() {
+  const menu = document.querySelector('#menu');
+  const openBtn = document.querySelector('#menu-open');
+  const closeBtn = document.querySelector('#menu-close');
+
+  if (menu && openBtn && closeBtn) {
+    function menuOpen() {
+      document.documentElement.classList.add('is-locked');
+      menu.classList.add('opened');
+    }
+
+    function menuClose() {
+      document.documentElement.classList.remove('is-locked');
+      menu.classList.remove('opened');
+    }
+
+    openBtn.addEventListener('click', menuOpen);
+    closeBtn.addEventListener('click', menuClose);
+  }
+})();
