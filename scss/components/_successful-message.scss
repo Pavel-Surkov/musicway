@@ -1,0 +1,38 @@
+.successful-message {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+	background: $white;
+	z-index: 6;
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s;
+	will-change: opacity;
+	width: min(calc(100% - 30px), 460px);
+	&.opened {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	&__wrapper {
+		padding: 45px;
+		@include flex(column, center);
+		& img {
+			margin-bottom: 25px;
+		}
+	}
+	&__title {
+		@include font(2rem, calc(26 / 20));
+		text-align: center;
+		margin-bottom: 12px;
+	}
+	&__subtitle {
+		& p {
+			@include font(1.4rem, clac(16/14));
+			text-align: center;
+			color: $gray-300;
+		}
+	}
+}

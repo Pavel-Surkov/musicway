@@ -1,0 +1,58 @@
+.study-form {
+	position: fixed;
+	width: min(calc(100% - 30px), 360px);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: $white;
+	border-radius: 10px;
+	z-index: 6;
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s;
+	will-change: opacity;
+	&.opened {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	&__wrapper {
+		position: relative;
+		padding: 45px 22px;
+	}
+	&__close {
+		position: absolute;
+		display: grid;
+		place-items: center;
+		top: 13px;
+		right: 13px;
+	}
+	&__title {
+		text-align: center;
+		margin-bottom: 30px;
+		@include font(2.2rem, calc(26 / 22));
+	}
+	&__form {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-gap: 48px;
+		& .input-primary {
+			padding-bottom: 16px;
+			@include font(1.6rem, 1);
+			letter-spacing: 0.03em;
+			width: 100%;
+			max-width: none;
+			color: $gray-300;
+			&::placeholder {
+				@include font(1.6rem, 1);
+				letter-spacing: 0.03em;
+			}
+		}
+		& .courses-form__terms {
+			grid-column: span 1;
+			& .btn-primary {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

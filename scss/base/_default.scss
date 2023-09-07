@@ -40,6 +40,24 @@
 	grid-gap: 20px;
 }
 
+.blocker {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 5;
+	background: rgba($black-100, 0.2);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s;
+	will-change: opacity;
+	&.opened {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.col-3 {
 		grid-template-columns: repeat(2, 1fr);

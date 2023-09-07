@@ -1,0 +1,24 @@
+.select-primary {
+	padding: 0;
+	padding-bottom: 18px;
+	border-bottom: 1.5px solid $gray-200;
+	width: 100%;
+	color: $gray-300;
+	@include font(1.6rem, 1);
+	letter-spacing: 0.03em;
+	& option:checked {
+		color: $black-100;
+	}
+	&__wrapper {
+		position: relative;
+		&::placeholder {
+			color: $gray-300;
+		}
+		&::after {
+			@include after(0, 15px, 8px);
+			background: icon('drop.svg') no-repeat 50% / cover;
+			top: 6px;
+			transform: none;
+		}
+	}
+}

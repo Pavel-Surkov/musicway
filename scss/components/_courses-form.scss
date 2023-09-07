@@ -36,6 +36,13 @@
 			@include font(1.2rem, calc(16 / 12));
 			color: $gray-600;
 		}
+		& a {
+			color: $gray-600;
+			text-decoration: underline;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
 	}
 }
 

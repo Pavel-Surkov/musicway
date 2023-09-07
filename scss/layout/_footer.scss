@@ -16,6 +16,12 @@
 			&:hover {
 				color: $red-100;
 			}
+			&.active {
+				color: $red-100;
+				&::before {
+					content: none;
+				}
+			}
 		}
 	}
 	&-middle {
