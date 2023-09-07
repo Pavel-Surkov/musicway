@@ -249,11 +249,23 @@ function openSuccessfulMessage() {
 
     if (form) {
       formElement.addEventListener('submit', function (e) {
-        e.preventDefault();
         closeForm();
+      });
+    }
+  }
+})();
+
+// Successful form handle
+(function handleForms() {
+  const forms = document.querySelectorAll('.form');
+
+  if (forms[0]) {
+    forms.forEach(function (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
         openSuccessfulMessage();
       });
-    }
+    });
   }
 })();
