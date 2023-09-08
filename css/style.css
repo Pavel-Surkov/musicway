@@ -225,21 +225,18 @@ a {
   src: url("../assets/fonts/Mont-Regular.woff") format("woff"), url("../assets/fonts/Mont-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Mont";
   src: url("../assets/fonts/Mont-Bold.woff") format("woff"), url("../assets/fonts/Mont-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Mont";
   src: url("../assets/fonts/Mont-SemiBold.woff") format("woff"), url("../assets/fonts/Mont-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
 }
 .swiper .swiper-pagination {
   display: flex;
@@ -2357,6 +2354,9 @@ a {
   letter-spacing: 0.03em;
   z-index: 1;
 }
+.about-hero__swiper .swiper-slide {
+  height: auto;
+}
 .about-hero__slide {
   border-radius: 10px;
   overflow: hidden;
@@ -2795,6 +2795,7 @@ a {
   transform: none;
   transition: transform 0.2s;
   will-change: transform;
+  flex-shrink: 0;
 }
 .faq-item__plus span {
   position: absolute;
@@ -2816,11 +2817,27 @@ a {
   background: #f4f4f4;
 }
 .faq-item.opened .faq-content {
-  display: block;
+  grid-template-rows: 1fr;
+}
+.faq-item.opened .faq-content__wrapper {
+  transform: translateY(0);
+  visibility: visible;
+  transition: transform 0.3s ease, visibility 0s linear;
 }
 .faq-content {
-  display: none;
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.3s ease;
+}
+.faq-content__wrapper {
   padding: 0 20px 24px;
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition: transform 0.3s ease, visibility 0s 0.3s ease;
+}
+.faq-content__animation {
+  min-height: 0;
 }
 .faq-content p {
   font-size: 1.6rem;
@@ -2837,6 +2854,7 @@ a {
   }
   .faq-item__btn {
     padding: 17px 11px;
+    padding-right: 8px;
     font-size: 1.8rem;
     line-height: 1.3333333333;
   }
@@ -2848,8 +2866,10 @@ a {
     width: 18px;
   }
   .faq-content {
-    padding: 0 11px 20px;
     max-width: calc(100% - 29px - 15px);
+  }
+  .faq-content__wrapper {
+    padding: 0 20px 24px;
   }
   .faq-content p {
     font-size: 1.4rem;
@@ -2949,6 +2969,9 @@ a {
     line-height: 1;
     right: 14px;
     bottom: 17px;
+  }
+  .about-swiper .swiper-navigation {
+    display: none;
   }
 }
 .prices {

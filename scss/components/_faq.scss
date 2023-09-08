@@ -28,6 +28,7 @@
 			transform: none;
 			transition: transform 0.2s;
 			will-change: transform;
+			flex-shrink: 0;
 			& span {
 				position: absolute;
 				display: inline-block;
@@ -50,13 +51,33 @@
 				background: $light-100;
 			}
 			& .faq-content {
-				display: block;
+				grid-template-rows: 1fr;
+				&__wrapper {
+					transform: translateY(0);
+					visibility: visible;
+					transition:
+						transform 0.3s ease,
+						visibility 0s linear;
+				}
 			}
 		}
 	}
 	&-content {
-		display: none;
-		padding: 0 20px 24px;
+		display: grid;
+		grid-template-rows: 0fr;
+		overflow: hidden;
+		transition: grid-template-rows 0.3s ease;
+		&__wrapper {
+			padding: 0 20px 24px;
+			transform: translateY(-100%);
+			visibility: hidden;
+			transition:
+				transform 0.3s ease,
+				visibility 0s 0.3s ease;
+		}
+		&__animation {
+			min-height: 0;
+		}
 		& p {
 			@include font(1.6rem, calc(24 / 16));
 			max-width: 850px;
@@ -73,6 +94,7 @@
 		&-item {
 			&__btn {
 				padding: 17px 11px;
+				padding-right: 8px;
 				@include font(1.8rem, calc(24 / 18));
 			}
 			&__plus {
@@ -84,8 +106,10 @@
 			}
 		}
 		&-content {
-			padding: 0 11px 20px;
 			max-width: calc(100% - 29px - 15px);
+			&__wrapper {
+				padding: 0 20px 24px;
+			}
 			& p {
 				@include font(1.4rem, calc(20 / 14));
 			}

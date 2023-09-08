@@ -21,6 +21,9 @@
 			letter-spacing: 0.03em;
 			z-index: 1;
 		}
+		& .swiper-slide {
+			height: auto;
+		}
 	}
 	&__slide {
 		border-radius: 10px;
