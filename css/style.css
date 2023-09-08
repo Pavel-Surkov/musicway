@@ -2765,6 +2765,9 @@ a {
   margin-bottom: 44px;
   text-align: center;
 }
+.faq-wrapper {
+  list-style: none;
+}
 .faq-item {
   border-top: 0.5px solid rgba(112, 112, 112, 0.45);
 }
@@ -2772,6 +2775,7 @@ a {
   border-bottom: 0.5px solid rgba(112, 112, 112, 0.45);
 }
 .faq-item__btn {
+  cursor: pointer;
   padding: 24px 20px;
   font-size: 2.4rem;
   line-height: 1.3333333333;
