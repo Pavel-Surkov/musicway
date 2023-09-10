@@ -1677,6 +1677,14 @@ a {
     display: block;
     margin-top: 16px;
   }
+  .teachers .person-card__bottom p {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+  }
+  .teachers .person-card__bottom .title {
+    font-size: 2.4rem;
+    line-height: 1.1666666667;
+  }
 }
 @media screen and (max-width: 767px) {
   .teachers-swiper {
@@ -1825,9 +1833,6 @@ a {
     padding-top: 50px;
     padding-bottom: 60px;
   }
-  .price-top .link-arrow {
-    display: none;
-  }
   .price-top .title {
     letter-spacing: 0.05em;
   }
@@ -1894,6 +1899,13 @@ a {
   }
   .price-item_unique .price-item__price {
     margin-top: 18px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .price-top {
+    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .students-wrapper {
