@@ -4,8 +4,11 @@
 		padding: 85px 0 92px;
 	}
 	&-top {
-		margin-bottom: 30px;
+		margin-bottom: 24px;
 		@include flex(row, center, space-between);
+	}
+	&-mobile {
+		display: none;
 	}
 	&-block {
 		display: grid;
@@ -114,13 +117,19 @@
 @media screen and (max-width: 991px) {
 	.price {
 		&-wrapper {
-			padding-top: 50px;
-			padding-bottom: 60px;
+			padding: 50px 0;
 		}
 		&-top {
 			& .title {
 				letter-spacing: 0.05em;
 			}
+			& .link-arrow {
+				display: none;
+			}
+		}
+		&-mobile {
+			display: block;
+			margin-top: 16px;
 		}
 	}
 }
