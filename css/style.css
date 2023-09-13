@@ -1575,7 +1575,6 @@ a {
     line-height: 1.375;
   }
   .contact-form .btn-primary {
-    order: 1;
     padding: 1.4em 2em;
   }
   .contact-form__wrapper {
@@ -1587,6 +1586,14 @@ a {
     min-width: auto;
     max-width: calc(50% - 14px);
     flex-grow: 1;
+  }
+  .contact-form__agreement {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-form .btn-primary {
+    order: 1;
   }
 }
 @media screen and (max-width: 576px) {

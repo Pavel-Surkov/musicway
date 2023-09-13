@@ -247,6 +247,8 @@ function openSuccessfulMessage() {
       closeBtn.addEventListener('click', closeForm);
     }
 
+    blocker.addEventListener('click', closeForm);
+
     if (form) {
       formElement.addEventListener('submit', function (e) {
         closeForm();

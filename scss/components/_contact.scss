@@ -67,7 +67,6 @@
 		}
 		&-form {
 			& .btn-primary {
-				order: 1;
 				padding: 1.4em 2em;
 			}
 			&__wrapper {
@@ -79,6 +78,19 @@
 					max-width: calc(50% - 14px);
 					flex-grow: 1;
 				}
+			}
+			&__agreement {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.contact {
+		&-form {
+			& .btn-primary {
+				order: 1;
 			}
 		}
 	}
